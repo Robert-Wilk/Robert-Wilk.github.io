@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d44e56d2.css",
+    "main.js": "/static/js/main.980c9175.js",
+    "static/media/mewithboard.JPG": "/static/media/mewithboard.22dad2d45695aba4eb45.JPG",
+    "static/media/mewithsnow.JPG": "/static/media/mewithsnow.69ee54cb2c782188a895.JPG",
+    "static/media/ghoul_game.png": "/static/media/ghoul_game.01ab4deaea3a89b1ede7.png",
+    "static/media/cb.png": "/static/media/cb.877f630deec9b59774cf.png",
+    "static/media/drWilk.png": "/static/media/drWilk.fdef20f2860f03267d72.png",
+    "static/media/android-chrome-512x512.png": "/static/media/android-chrome-512x512.1299b6ecded422246023.png",
+    "static/media/bigbrain.jpg": "/static/media/bigbrain.e00b97d8927b96f90eff.jpg",
+    "index.html": "/index.html",
+    "main.d44e56d2.css.map": "/static/css/main.d44e56d2.css.map",
+    "main.980c9175.js.map": "/static/js/main.980c9175.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d44e56d2.css",
+    "static/js/main.980c9175.js"
+  ]
+}
