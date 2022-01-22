@@ -31,7 +31,7 @@ const FooterStyle = styled.div`
                     color: var(--white);
                 }
                 svg {
-                    height: 3rem;
+                    height: 4rem;
                     width: auto;
                 }
             }

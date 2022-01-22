@@ -13,7 +13,7 @@ const WorkExperienceStyles = styled.nav`
     justify-content: center;
     svg {
       margin-left: 2rem;
-      width: 6rem;
+      width: 4rem;
       height: auto;
     }
   }

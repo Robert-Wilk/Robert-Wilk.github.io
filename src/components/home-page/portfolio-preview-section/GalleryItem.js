@@ -10,9 +10,7 @@ const GalleryItemStyles = styled.div`
     overflow: hidden;
     display: inline-block;
     border: 3px solid var(--black);
-    img {
-      height: 100%;
-    }
+    object-fit: fill;
   }
   .galleryItem__info {
     margin-top: 1rem;
@@ -46,10 +44,10 @@ export default function GalleryItem({
 
   return (
     <GalleryItemStyles>
-      <Link key={key} to={{pathname: `/Portfolio/${index}`}} className="galleryItem__img">
-        <img src={img} alt="project img" />
+      <Link key={key} to={{pathname: `/Portfolio/${index}`}} className={"galleryItem__img"}>
+        <img src={img} alt="project img"  />
       </Link>
-      <div className="galleryItem__info">
+      <div className={"galleryItem__info"}>
         <Link key={key} to={{pathname: `/Portfolio/${index}`}}>
           <h3 className="galleryItem__title">{title}</h3>
         </Link>

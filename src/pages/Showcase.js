@@ -21,6 +21,9 @@ const ShowcaseStyles = styled.div`
   .showcase__right {
     flex: 1;
   }
+  .showcase__right {
+    text-align: right;
+  }
   .section-title {
     text-align: left;
     color: var(--blue-light);
@@ -42,6 +45,13 @@ const ShowcaseStyles = styled.div`
   }
   .section-title p {
     color: var(--red-light);
+  }
+  img {
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+    object-position: 10% top;
+    overflow: hidden;
   }
   @media only screen and (max-width: 950px) {
     .showcase__left {
@@ -66,6 +76,7 @@ const ShowcaseStyles = styled.div`
     }
     .showcase__right {
       margin-top: 3rem;
+      text-align: center;
     }
     .section-title {
       text-align: center;
@@ -83,9 +94,6 @@ const ShowcaseStyles = styled.div`
         text-align: center;
       }
     }
-  }
-  @media only screen and (max-width: 600px) {
-    padding: 8rem 0 10rem 0;
   }
 `;
 

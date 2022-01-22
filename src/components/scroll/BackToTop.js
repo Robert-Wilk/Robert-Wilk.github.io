@@ -6,7 +6,7 @@ const BackStyles = styled.div`
     border-radius: 8px;
     display: inline-block;
     border: 2px solid var(--white);
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     text-align: center;
     margin: 0 auto;
     display: flex;

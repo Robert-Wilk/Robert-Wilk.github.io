@@ -4,7 +4,7 @@ const SectionTitleStyles = styled.div`
     text-align: center;
     p {
         font-family: 'Roboto';
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     h2 {
         font-family: 'Oswald';
@@ -16,7 +16,7 @@ const SectionTitleStyles = styled.div`
     @media only screen and (max-width: 768px) {
         text-align: center;
         p {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
         }
         h2 {
             font-size: 3.6rem;
