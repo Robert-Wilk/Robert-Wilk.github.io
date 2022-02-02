@@ -1,4 +1,3 @@
-
 /* install Swiper modules
 SwiperCore.use([Autoplay, Pagination]);
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,10 +6,10 @@ import GalleryItem from '../components/home-page/gallery-preview-section/Gallery
 import 'swiper/swiper-bundle.min.css';
 */
 
-import SectionTitle from '../components/utility/SectionTitle';
-import styled from 'styled-components';
-import PText from '../components/utility/PText';
-import mewithboard from '../assests/images/mewithboard.JPG';
+import SectionTitle from "../components/utility/SectionTitle";
+import styled from "styled-components";
+import PText from "../components/utility/PText";
+import mewithboard from "../assests/images/mewithboard.JPG";
 
 const AboutPageStyles = styled.div`
   background-color: var(--light-bg);
@@ -98,20 +97,30 @@ const AboutPageStyles = styled.div`
 
 export default function About() {
   return (
-      <AboutPageStyles>
-            <div className="container">
-                <div className="aboutSection__left">
-                    <SectionTitle className="section-title" subheading="" heading="Robert Wilk"/>
-                    <PText>
-                    I am a student at the University of North Carolina at Charlotte.
-                    At UNC Charlotte, I am majoring in Computer Science with a concentration in AI, robotics, and gaming, with minoring in Computer Engineering.<br /><br />
-                    I have many things I like to do in my free time. I like to play video games, go rock climbing/bouldering, go longboarding, build/launch rockets, and learn about front-end development.
-                    </PText>
-                </div>
-                <div className="aboutSection__right">
-                    <img src={mewithboard} alt="About Section image" />
-                </div>
-            </div>
-      </AboutPageStyles>
+    <AboutPageStyles>
+      <div className="container">
+        <div className="aboutSection__left">
+          <SectionTitle
+            className="section-title"
+            subheading=""
+            heading="Robert Wilk"
+          />
+          <PText>
+            I am a student at the University of North Carolina at Charlotte. At
+            UNC Charlotte, I am majoring in Computer Science with a
+            concentration in AI, robotics, and gaming, with minoring in Computer
+            Engineering.
+            <br />
+            <br />
+            I have many things I like to do in my free time. I like to
+            play video games, go rock climbing/bouldering, go longboarding,
+            build/launch rockets, and learn about front-end development.
+          </PText>
+        </div>
+        <div className="aboutSection__right">
+          <img src={mewithboard} alt="About Section image" />
+        </div>
+      </div>
+    </AboutPageStyles>
   );
 }

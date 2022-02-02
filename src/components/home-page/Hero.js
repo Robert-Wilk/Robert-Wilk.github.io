@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import Button from '../utility/Button';
-import PText from '../utility/PText';
-import SectionTitleReverse from '../utility/SectionTitleReverse';
-import mewithsnow from '../../assests/images/mewithsnow.JPG';
+import styled from "styled-components";
+import Button from "../utility/Button";
+import PText from "../utility/PText";
+import SectionTitleReverse from "../utility/SectionTitleReverse";
+import mewithsnow from "../../assests/images/mewithsnow.JPG";
 
 const HeroStyles = styled.div`
   padding-top: 10rem;
@@ -85,12 +85,10 @@ export default function Hero() {
     <HeroStyles>
       <div className="container">
         <div className="heroSection__left">
-          <SectionTitleReverse
-            subheading="Hello, I am"
-            heading="Robert Wilk"
-          />
+          <SectionTitleReverse subheading="Hello, I am" heading="Robert Wilk" />
           <PText>
-            A CS student studying artificial intelligence, robotics, and front-end development.
+            A CS student studying artificial intelligence, robotics, and
+            front-end development.
           </PText>
           <div className="heroSection__buttons">
             <Button btnText="Portfolio" btnLink="/Portfolio" />

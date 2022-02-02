@@ -1,11 +1,11 @@
 // import Button2 from '../components/utility/Button2';
-import Education from '../components/resume-page/Education';
-import Skills from '../components/resume-page/Skills';
-import WorkExperience from '../components/resume-page/WorkExperience';
-import Clubs from '../components/resume-page/Clubs';
-import Awards from '../components/resume-page/Awards';
+import Education from "../components/resume-page/Education";
+import Skills from "../components/resume-page/Skills";
+import WorkExperience from "../components/resume-page/WorkExperience";
+import Clubs from "../components/resume-page/Clubs";
+import Awards from "../components/resume-page/Awards";
 // import resume from '../assests/data/Resume.pdf';
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const ResumePageStyles = styled.div`
   padding-top: 8rem;
@@ -29,18 +29,17 @@ const ResumePageStyles = styled.div`
 `;
 
 export default function Resume() {
-
   return (
     <ResumePageStyles>
-        <div className="container">
-            <div className="sections">
-              <Education />
-              <Skills />
-              <WorkExperience />
-              <Clubs />
-              <Awards />
-            </div>
+      <div className="container">
+        <div className="sections">
+          <Education />
+          <Skills />
+          <WorkExperience />
+          <Clubs />
+          <Awards />
         </div>
+      </div>
     </ResumePageStyles>
   );
 }

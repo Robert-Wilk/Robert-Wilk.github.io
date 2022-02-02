@@ -1,5 +1,5 @@
-// TODO FIX TABBING ON ALL CSS
-import { createGlobalStyle } from 'styled-components';
+// TODO: FIX TABBING ON ALL CSS
+import { createGlobalStyle } from "styled-components";
 
 const Styles = createGlobalStyle`
 * {

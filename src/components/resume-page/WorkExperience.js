@@ -1,7 +1,7 @@
-import { HiOutlineBriefcase } from '../../proxy/react-icons-proxy';
-import Job from './Job';
-import SectionTitle from '../utility/SectionTitle';
-import styled from 'styled-components';
+import { HiOutlineBriefcase } from "../../proxy/react-icons-proxy";
+import Job from "./Job";
+import SectionTitle from "../utility/SectionTitle";
+import styled from "styled-components";
 
 const WorkExperienceStyles = styled.nav`
   .container {
@@ -33,7 +33,6 @@ const WorkExperienceStyles = styled.nav`
 `;
 
 export default function WorkExperience() {
-
   return (
     <WorkExperienceStyles>
       <div className="container">
@@ -42,25 +41,29 @@ export default function WorkExperience() {
           <HiOutlineBriefcase />
         </div>
         <div className="work__jobs">
-          <Job 
-            title={"Air Ramp Person | Package Handler"} 
-            company={"United Parcel Service (UPS)"} 
-            location={"Charlotte, NC"} 
-            time={"Jun. 2021 - Aug. 2021"} 
-            responsibilities={["Carefully handle packages coming from delivery trucks and airplanes", 
-                                "Safely operate machinery used to load/unload airplanes and delivery trucks", 
-                                "Sort packages for appropriate destination",
-                                "Provide appropriate care for hazardous material transport",
-                                "Guide vehicles within airplane perimeter",
-                                "Uphold Airport Security guidelines"]} 
+          <Job
+            title={"Air Ramp Person | Package Handler"}
+            company={"United Parcel Service (UPS)"}
+            location={"Charlotte, NC"}
+            time={"Jun. 2021 - Aug. 2021"}
+            responsibilities={[
+              "Carefully handle packages coming from delivery trucks and airplanes",
+              "Safely operate machinery used to load/unload airplanes and delivery trucks",
+              "Sort packages for appropriate destination",
+              "Provide appropriate care for hazardous material transport",
+              "Guide vehicles within airplane perimeter",
+              "Uphold Airport Security guidelines",
+            ]}
           />
-          <Job 
-            title={"Special Needs Caregiver"} 
-            company={"GT Independence"} 
-            location={"Charlotte, NC"} 
-            time={"May 2019 - Jan. 2021"} 
-            responsibilities={["Promoted independence through skill building and providing opportunities to practice daily activities (cooking, cleaning, travelling in the community)", 
-                                "Provided care for individuals who are medically fragile by reminding them to take medications, rest breaks, and stay hydrated"]} 
+          <Job
+            title={"Special Needs Caregiver"}
+            company={"GT Independence"}
+            location={"Charlotte, NC"}
+            time={"May 2019 - Jan. 2021"}
+            responsibilities={[
+              "Promoted independence through skill building and providing opportunities to practice daily activities (cooking, cleaning, travelling in the community)",
+              "Provided care for individuals who are medically fragile by reminding them to take medications, rest breaks, and stay hydrated",
+            ]}
           />
         </div>
       </div>

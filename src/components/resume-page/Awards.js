@@ -1,16 +1,16 @@
-import { HiOutlineLightBulb } from '../../proxy/react-icons-proxy';
-import SectionTitle from '../utility/SectionTitle';
-import styled from 'styled-components';
+import { HiOutlineLightBulb } from "../../proxy/react-icons-proxy";
+import SectionTitle from "../utility/SectionTitle";
+import styled from "styled-components";
 
 const AwardsStyles = styled.nav`
   .container {
     text-align: left;
   }
   h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
   p {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   .awards__header {
     display: flex;
@@ -56,26 +56,35 @@ const AwardsStyles = styled.nav`
 `;
 
 export default function Awards() {
-
   return (
     <AwardsStyles>
       <div className="container">
         <div className="awards__header">
-          <SectionTitle className="section-title" heading="Awards" subheading="" />
+          <SectionTitle
+            className="section-title"
+            heading="Awards"
+            subheading=""
+          />
           <HiOutlineLightBulb />
         </div>
         <div className="awards__grid">
           <div className="row">
             <h1>Chancellors List</h1>
-            <p><strong>Fall: </strong>2019, 2020, 2021<br /><strong>Spring: </strong>2021</p> 
+            <p>
+              <strong>Fall: </strong>2019, 2020, 2021
+              <br />
+              <strong>Spring: </strong>2021
+            </p>
           </div>
           <div className="row">
             <h1>Deans List</h1>
-            <p><strong>Spring: </strong>2020</p> 
+            <p>
+              <strong>Spring: </strong>2020
+            </p>
           </div>
           <div className="row padding">
             <h1>IEEE-HKN Kappa Phi</h1>
-            <p>Honor society member and chapter treasurer</p> 
+            <p>Honor society member and chapter treasurer</p>
           </div>
         </div>
       </div>

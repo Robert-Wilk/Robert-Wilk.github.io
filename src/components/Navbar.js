@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom';
-import { HiOutlineMenu, MdClose } from '../proxy/react-icons-proxy';
-import {useState} from 'react';
-import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
+import { HiOutlineMenu, MdClose } from "../proxy/react-icons-proxy";
+import { useState } from "react";
+import styled from "styled-components";
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -11,7 +11,7 @@ const NavStyles = styled.nav`
   width: 100%;
   padding: 1rem 0;
   background: var(--white);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -27,7 +27,7 @@ const NavStyles = styled.nav`
     }
     a {
       display: inline-block;
-      font-family: 'Roboto';
+      font-family: "Roboto";
       padding: 1rem 2rem;
       font-size: 2rem;
       color: var(--black);
@@ -84,7 +84,7 @@ const NavStyles = styled.nav`
       position: absolute;
       right: 1rem;
       top: var(--top);
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
       .closeNavIcon {
         display: block;
         width: 3rem;
@@ -116,25 +116,25 @@ export default function NavMenu() {
       <div
         className="mobile-menu-icon"
         onClick={() => {
-          setShowNav(!showNav) 
+          setShowNav(!showNav);
         }}
         role="button"
         onKeyDown={() => {
-          setShowNav(!showNav) 
+          setShowNav(!showNav);
         }}
         tabIndex={0}
       >
         <HiOutlineMenu />
       </div>
-      <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
+      <ul className={!showNav ? "navItems hide-item" : "navItems"}>
         <div
           className="closeNavIcon"
           onClick={() => {
-            setShowNav(!showNav) 
+            setShowNav(!showNav);
           }}
           role="button"
           onKeyDown={() => {
-            setShowNav(!showNav) 
+            setShowNav(!showNav);
           }}
           tabIndex={0}
         >

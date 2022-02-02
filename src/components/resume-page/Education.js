@@ -1,13 +1,13 @@
-import { FaGraduationCap } from '../../proxy/react-icons-proxy';
-import SectionTitle from '../utility/SectionTitle';
-import styled from 'styled-components';
+import { FaGraduationCap } from "../../proxy/react-icons-proxy";
+import SectionTitle from "../utility/SectionTitle";
+import styled from "styled-components";
 
 const EducationStyles = styled.nav`
   h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
   p {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   .education__header {
     display: flex;
@@ -37,7 +37,6 @@ const EducationStyles = styled.nav`
     }
   }
   .schoolInfo__bottom {
-
   }
   .education__right {
     text-align: right;
@@ -50,7 +49,7 @@ const EducationStyles = styled.nav`
   }
   @media only screen and (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
     p {
       font-size: 1.5rem;
@@ -72,18 +71,21 @@ const EducationStyles = styled.nav`
       text-align: left;
     }
     .padding {
-      padding-bottom: .2rem;
+      padding-bottom: 0.2rem;
     }
   }
 `;
 
 export default function Education() {
-
   return (
     <EducationStyles>
       <div className="container">
         <div className="education__header">
-          <SectionTitle className="section-title" heading="Education" subheading="" />
+          <SectionTitle
+            className="section-title"
+            heading="Education"
+            subheading=""
+          />
           <FaGraduationCap />
         </div>
         <div className="education__content">
@@ -95,13 +97,20 @@ export default function Education() {
             <div className="schoolInfo__bottom">
               <ul>
                 <li className="padding">
-                  <p><strong>GPA: </strong>3.925</p>
+                  <p>
+                    <strong>GPA: </strong>3.925
+                  </p>
                 </li>
                 <li className="padding">
-                  <p><strong>Concentration: </strong>Artificial Intelligence, Robotics, Gaming</p>
+                  <p>
+                    <strong>Concentration: </strong>Artificial Intelligence,
+                    Robotics, Gaming
+                  </p>
                 </li>
                 <li className="paddingMore">
-                  <p><strong>Minor: </strong>Computer Engineering</p>
+                  <p>
+                    <strong>Minor: </strong>Computer Engineering
+                  </p>
                 </li>
               </ul>
             </div>

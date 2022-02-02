@@ -1,16 +1,16 @@
-import { HiOutlineChip } from '../../proxy/react-icons-proxy';
-import SectionTitle from '../utility/SectionTitle';
-import styled from 'styled-components';
+import { HiOutlineChip } from "../../proxy/react-icons-proxy";
+import SectionTitle from "../utility/SectionTitle";
+import styled from "styled-components";
 
 const SkillsStyles = styled.nav`
   .container {
     text-align: left;
   }
   h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
   p {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   .skills__header {
     display: flex;
@@ -56,26 +56,29 @@ const SkillsStyles = styled.nav`
 `;
 
 export default function Skills() {
-
   return (
     <SkillsStyles>
       <div className="container">
         <div className="skills__header">
-          <SectionTitle className="section-title" heading="Skills" subheading="" />
+          <SectionTitle
+            className="section-title"
+            heading="Skills"
+            subheading=""
+          />
           <HiOutlineChip />
         </div>
         <div className="skills__grid">
           <div className="row">
             <h1>Programming</h1>
-            <p>Python, Java, C, C++, HTML/CSS, JavaScript, PostgreSQL</p> 
+            <p>Python, Java, C, C++, HTML/CSS, JavaScript, PostgreSQL</p>
           </div>
           <div className="row">
             <h1>Frameworks</h1>
-            <p>React, Django, JUnit, PyTest, OpenCV, ROS</p> 
+            <p>React, Django, JUnit, PyTest, OpenCV, ROS</p>
           </div>
           <div className="row padding">
             <h1>Software Skills</h1>
-            <p>Git, Agile/Scrum, Windows, Mac, Linux, Discord, Zoom</p> 
+            <p>Git, Agile/Scrum, Windows, Mac, Linux, Discord, Zoom</p>
           </div>
         </div>
       </div>

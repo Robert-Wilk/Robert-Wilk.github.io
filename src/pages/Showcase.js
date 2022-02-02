@@ -1,10 +1,11 @@
-import SectionTitle from '../components/utility/SectionTitle';
-import styled from 'styled-components';
-import PText from '../components/utility/PText';
-import { useParams } from 'react-router';
-import works from '../assests/data/works';
-import Button from '../components/utility/Button';
-import Button2 from '../components/utility/Button2';
+import SectionTitle from "../components/utility/SectionTitle";
+import styled from "styled-components";
+import PText from "../components/utility/PText";
+import { useParams } from "react-router";
+import works from "../assests/data/works";
+import Button from "../components/utility/Button";
+import Button2 from "../components/utility/Button2";
+import visualizations from "../assests/data/visualizations";
 
 const ShowcaseStyles = styled.div`
   padding: 10rem 0 10rem 0;
@@ -26,7 +27,6 @@ const ShowcaseStyles = styled.div`
   }
   .section-title {
     text-align: left;
-    color: var(--blue-light);
   }
   .para {
     margin-top: 2rem;
@@ -39,9 +39,6 @@ const ShowcaseStyles = styled.div`
     justify-content: flex-start;
     gap: 2rem;
     margin-top: 2rem;
-  }
-  .section-title h2 {
-    color: var(--blue-light);
   }
   .section-title p {
     color: var(--red-light);
@@ -99,31 +96,44 @@ const ShowcaseStyles = styled.div`
 
 export default function Showcase(props) {
   let { id } = useParams();
+
   let galleryEntry = works[parseInt(id, 10)];
 
   if (!galleryEntry) return <div>Entry Not found</div>;
 
-  return (
+  if (!galleryEntry.isVisualization) {
+    return (
       <ShowcaseStyles>
-            <div className="container">
-                <div className="showcase__left">
-                    <SectionTitle className="section-title" subheading={galleryEntry.date} heading={galleryEntry.name}/>
-                    <PText>
-                    {galleryEntry.desc}
-                    </PText>
-                    <div className="showcase__buttons">
-                      <Button btnLink={"/Portfolio"} btnText={"Back to Portfolio"}/>
-                      <Button2
-                          btnText="View Project" 
-                          galleryEntry
-                          btnLink={galleryEntry.link} outline
-                          btnHasLink={galleryEntry.hasLink} />
-                    </div>
-                </div>
-                <div className="showcase__right">
-                    <img src={galleryEntry.img} alt="Gallery Entry Image" />
-                </div>
+        <div className="container">
+          <div className="showcase__left">
+            <SectionTitle
+              className="section-title"
+              subheading={galleryEntry.date}
+              heading={galleryEntry.name}
+            />
+            <PText>{galleryEntry.desc}</PText>
+            <div className="showcase__buttons">
+              <Button btnLink={"/Portfolio"} btnText={"Back to Portfolio"} />
+              <Button2
+                btnText="View Project"
+                galleryEntry
+                btnLink={galleryEntry.link}
+                outline
+                btnHasLink={galleryEntry.hasLink}
+              />
             </div>
+          </div>
+          <div className="showcase__right">
+            <img src={galleryEntry.img} alt="Gallery Entry Image" />
+          </div>
+        </div>
       </ShowcaseStyles>
-  );
+    );
+  } else {
+    return (
+      <>
+        { visualizations[galleryEntry.visualizationIndex].component }
+      </>
+    );
+  }
 }

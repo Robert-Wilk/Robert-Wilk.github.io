@@ -1,7 +1,6 @@
-import SectionTitle from '../components/utility/SectionTitle';
-import styled from 'styled-components';
-import PText from '../components/utility/PText';
-import placeholder from '../assests/images/placeholder.png';
+import SectionTitle from "../components/utility/SectionTitle";
+import styled from "styled-components";
+import PText from "../components/utility/PText";
 
 const NoMatchStyles = styled.div`
   padding: 10rem 0 10rem 0;
@@ -40,8 +39,12 @@ const NoMatchStyles = styled.div`
 
 export default function NoMatch() {
   return (
-      <NoMatchStyles>
-        <SectionTitle className="section-title" heading="No Match Found" subheading=""/>
-      </NoMatchStyles>
+    <NoMatchStyles>
+      <SectionTitle
+        className="section-title"
+        heading="No Match Found"
+        subheading=""
+      />
+    </NoMatchStyles>
   );
 }

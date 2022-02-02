@@ -1,25 +1,25 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import placeholder from '../../../assests/images/placeholder.png';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import placeholder from "../../../assests/images/placeholder.png";
 
 const GalleryItemStyles = styled.div`
   .galleryItem__title {
     color: var(--red-light);
     font-size: 2.2rem;
-    font-family: 'Oswald';
+    font-family: "Oswald";
     font-weight: 400;
   }
   .galleryItem__desc {
     font-size: 1.6rem;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     margin-top: 1rem;
   }
   /* ALT STYLE FOR LIST VIEW */
   .galleryItem__date {
     font-size: 1.6rem;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     margin-top: 1rem;
-    text-align: right;  
+    text-align: right;
   }
   .galleryItem__info_alt {
     gap: 5rem;
@@ -39,21 +39,20 @@ const GalleryItemStyles = styled.div`
 `;
 
 export default function GalleryItemAlt({
-    key = 0,
-    index = 0,
-    title = 'Project Name',
-    desc = 'description',
-    date = ''
+  key = 0,
+  index = 0,
+  title = "Project Name",
+  desc = "description",
+  date = "",
 }) {
-
   return (
     <GalleryItemStyles>
-      <Link key={key} to={{pathname: `/Portfolio/${index}`}}>
-      <div className={"galleryItem__info_alt"}>
+      <Link key={key} to={{ pathname: `/Portfolio/${index}` }}>
+        <div className={"galleryItem__info_alt"}>
           <h3 className="galleryItem__title">{title}</h3>
           <p className="galleryItem__desc">{desc}</p>
           <p className="galleryItem__date">{date}</p>
-      </div>
+        </div>
       </Link>
     </GalleryItemStyles>
   );

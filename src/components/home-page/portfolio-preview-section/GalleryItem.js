@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import placeholder from '../../../assests/images/placeholder.png';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import placeholder from "../../../assests/images/placeholder.png";
 
 const GalleryItemStyles = styled.div`
   .galleryItem__img {
@@ -19,12 +19,12 @@ const GalleryItemStyles = styled.div`
   .galleryItem__title {
     color: var(--red-light);
     font-size: 2.2rem;
-    font-family: 'Oswald';
+    font-family: "Oswald";
     font-weight: 400;
   }
   .galleryItem__desc {
     font-size: 1.6rem;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     margin-top: 1rem;
   }
   @media only screen and (max-width: 768px) {
@@ -35,20 +35,23 @@ const GalleryItemStyles = styled.div`
 `;
 
 export default function GalleryItem({
-    key = 0,
-    index = 0,
-    img = placeholder,
-    title = 'Project Name',
-    desc = 'description',
+  key = 0,
+  index = 0,
+  img = placeholder,
+  title = "Project Name",
+  desc = "description",
 }) {
-
   return (
     <GalleryItemStyles>
-      <Link key={key} to={{pathname: `/Portfolio/${index}`}} className={"galleryItem__img"}>
-        <img src={img} alt="project img"  />
+      <Link
+        key={key}
+        to={{ pathname: `/Portfolio/${index}` }}
+        className={"galleryItem__img"}
+      >
+        <img src={img} alt="project img" />
       </Link>
       <div className={"galleryItem__info"}>
-        <Link key={key} to={{pathname: `/Portfolio/${index}`}}>
+        <Link key={key} to={{ pathname: `/Portfolio/${index}` }}>
           <h3 className="galleryItem__title">{title}</h3>
         </Link>
         <p className="galleryItem__desc">{desc}</p>

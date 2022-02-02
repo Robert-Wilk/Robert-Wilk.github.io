@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import { MdSearch, BsGrid3X3Gap, BsCardList } from '../proxy/react-icons-proxy';
-import SectionTitle from '../components/utility/SectionTitle';
-import GalleryItem from '../components/home-page/portfolio-preview-section/GalleryItem';
-import GalleryItemAlt from '../components/home-page/portfolio-preview-section/GalleryItemAlt';
-import works from '../assests/data/works';
-import {useEffect, useState} from 'react';
+import styled from "styled-components";
+import { MdSearch, BsGrid3X3Gap, BsCardList } from "../proxy/react-icons-proxy";
+import SectionTitle from "../components/utility/SectionTitle";
+import GalleryItem from "../components/home-page/portfolio-preview-section/GalleryItem";
+import GalleryItemAlt from "../components/home-page/portfolio-preview-section/GalleryItemAlt";
+import works from "../assests/data/works";
+import { useEffect, useState } from "react";
 
 const PortfolioStyle = styled.div`
   padding: 10rem 0;
@@ -19,7 +19,7 @@ const PortfolioStyle = styled.div`
     width: 300px;
     border: 3px solid var(--red-light);
     border-radius: 12px;
-    display:inline-block; 
+    display: inline-block;
   }
   .projects__searchBar input {
     width: 100%;
@@ -47,11 +47,11 @@ const PortfolioStyle = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-    text-align: right;  
+    text-align: right;
   }
   .toggle-button {
-      width: 4em;
-      font-size: 10px;
+    width: 4em;
+    font-size: 10px;
   }
   .projects__allItems_alt {
     display: grid;
@@ -88,84 +88,89 @@ const PortfolioStyle = styled.div`
 `;
 
 export default function Portfolio() {
-    const [searchText, setSearchText] = useState('');
-    const [projectData, setProjectData] = useState(works);
-    const [cssMode, setCssMode] = useState(true);
+  const [searchText, setSearchText] = useState("");
+  const [projectData, setProjectData] = useState(works);
+  const [cssMode, setCssMode] = useState(true);
 
-    let length = projectData.length;
+  let length = projectData.length;
 
-    useEffect(() => {
-        if (searchText === '') return;
+  useEffect(() => {
+    if (searchText === "") return;
 
-        // Get projects to display from search text
-        const newData = works.filter((item) => (
-                item.name.toLowerCase().match(searchText.toLowerCase())
-            ))
-        setProjectData(newData);
-
-        // get the length of the new list
-        length = newData.length;
-    }, [searchText]);
-
-    function handleChange(e) {
-        e.preventDefault();
-        setSearchText(e.target.value);
-    }
-    // Change between css modes (card view and list view)
-    function cardView() {
-      setCssMode(true)
-      console.log(cssMode)
-    }
-    function listView() {
-      setCssMode(false)
-      console.log(cssMode)
-    }
-
-    return (
-        <PortfolioStyle>
-            <div className="container">
-                <SectionTitle heading="Portfolio" subheading="A collection of projects I have worked on!" />
-                <div className="projects__header">
-                  <div className="projects__searchBar">
-                      <form>
-                          <input
-                              type="text"
-                              value={searchText}
-                              onChange={handleChange}
-                              placeholder="Project Name"
-                              maxLength="20"
-                          />
-                          <MdSearch className="searchIcon"/>
-                      </form>
-                  </div>
-                  <div className="format-toggle">
-                    <BsCardList className="toggle-button" onClick={listView}/>
-                    <BsGrid3X3Gap className="toggle-button" onClick={cardView}/> 
-                  </div>
-                </div>
-                <div className={cssMode ? "projects__allItems" : "projects__allItems_alt"}>
-                    {cssMode === true &&
-                      projectData.map((item) =>(
-                          <GalleryItem
-                            key={item.id}
-                            index={item.id}
-                            title={item.name}
-                            desc={item.flavorText}
-                            img={item.img}
-                          />
-                    ))}
-                    {cssMode === false &&
-                      projectData.map((item) =>(
-                          <GalleryItemAlt
-                            key={item.id}
-                            index={item.id}
-                            title={item.name}
-                            desc={item.flavorText}
-                            date={item.date}
-                          />
-                    ))}
-                </div>
-            </div>
-        </PortfolioStyle>
+    // Get projects to display from search text
+    const newData = works.filter((item) =>
+      item.name.toLowerCase().match(searchText.toLowerCase())
     );
+    setProjectData(newData);
+
+    // get the length of the new list
+    length = newData.length;
+  }, [searchText]);
+
+  function handleChange(e) {
+    e.preventDefault();
+    setSearchText(e.target.value);
+  }
+  // Change between css modes (card view and list view)
+  function cardView() {
+    setCssMode(true);
+    console.log(cssMode);
+  }
+  function listView() {
+    setCssMode(false);
+    console.log(cssMode);
+  }
+
+  return (
+    <PortfolioStyle>
+      <div className="container">
+        <SectionTitle
+          heading="Portfolio"
+          subheading="A collection of projects I have worked on!"
+        />
+        <div className="projects__header">
+          <div className="projects__searchBar">
+            <form>
+              <input
+                type="text"
+                value={searchText}
+                onChange={handleChange}
+                placeholder="Project Name"
+                maxLength="20"
+              />
+              <MdSearch className="searchIcon" />
+            </form>
+          </div>
+          <div className="format-toggle">
+            <BsCardList className="toggle-button" onClick={listView} />
+            <BsGrid3X3Gap className="toggle-button" onClick={cardView} />
+          </div>
+        </div>
+        <div
+          className={cssMode ? "projects__allItems" : "projects__allItems_alt"}
+        >
+          {cssMode === true &&
+            projectData.map((item) => (
+              <GalleryItem
+                key={item.id}
+                index={item.id}
+                title={item.name}
+                desc={item.flavorText}
+                img={item.img}
+              />
+            ))}
+          {cssMode === false &&
+            projectData.map((item) => (
+              <GalleryItemAlt
+                key={item.id}
+                index={item.id}
+                title={item.name}
+                desc={item.flavorText}
+                date={item.date}
+              />
+            ))}
+        </div>
+      </div>
+    </PortfolioStyle>
+  );
 }
