@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.7481c972.css",
-    "main.js": "/static/js/main.ba0139e1.js",
+    "main.js": "/static/js/main.b3d8624d.js",
     "static/media/quasar.jpg": "/static/media/quasar.e1aeccdf61e7a9ca769c.jpg",
     "static/media/mewithboard.JPG": "/static/media/mewithboard.22dad2d45695aba4eb45.JPG",
     "static/media/mewithsnow.JPG": "/static/media/mewithsnow.69ee54cb2c782188a895.JPG",
     "static/media/relatives.png": "/static/media/relatives.a319b2f82a27d1b3a094.png",
     "static/media/cleaning1.png": "/static/media/cleaning1.f834417b4eaddac1a9a9.png",
+    "static/media/header.png": "/static/media/header.4fb5910dd986f33d68cd.png",
     "static/media/ghoul_game.png": "/static/media/ghoul_game.01ab4deaea3a89b1ede7.png",
     "static/media/headDisplay.png": "/static/media/headDisplay.96bf710763ab8d9928e4.png",
     "static/media/KaTeX_AMS-Regular.ttf": "/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
@@ -84,10 +85,10 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
     "main.7481c972.css.map": "/static/css/main.7481c972.css.map",
-    "main.ba0139e1.js.map": "/static/js/main.ba0139e1.js.map"
+    "main.b3d8624d.js.map": "/static/js/main.b3d8624d.js.map"
   },
   "entrypoints": [
     "static/css/main.7481c972.css",
-    "static/js/main.ba0139e1.js"
+    "static/js/main.b3d8624d.js"
   ]
 }
