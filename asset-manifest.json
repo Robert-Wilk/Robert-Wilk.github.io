@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7481c972.css",
-    "main.js": "/static/js/main.b3d8624d.js",
+    "main.js": "/static/js/main.31f2ff66.js",
     "static/media/quasar.jpg": "/static/media/quasar.e1aeccdf61e7a9ca769c.jpg",
     "static/media/mewithboard.JPG": "/static/media/mewithboard.22dad2d45695aba4eb45.JPG",
     "static/media/mewithsnow.JPG": "/static/media/mewithsnow.69ee54cb2c782188a895.JPG",
@@ -11,6 +11,7 @@
     "static/media/ghoul_game.png": "/static/media/ghoul_game.01ab4deaea3a89b1ede7.png",
     "static/media/headDisplay.png": "/static/media/headDisplay.96bf710763ab8d9928e4.png",
     "static/media/KaTeX_AMS-Regular.ttf": "/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
+    "static/media/project 4 image.png": "/static/media/project 4 image.5dcbe62c01ea7f3ed732.png",
     "static/media/cb.png": "/static/media/cb.877f630deec9b59774cf.png",
     "static/media/KaTeX_Main-Regular.ttf": "/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
     "static/media/drWilk.png": "/static/media/drWilk.fdef20f2860f03267d72.png",
@@ -85,10 +86,10 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
     "main.7481c972.css.map": "/static/css/main.7481c972.css.map",
-    "main.b3d8624d.js.map": "/static/js/main.b3d8624d.js.map"
+    "main.31f2ff66.js.map": "/static/js/main.31f2ff66.js.map"
   },
   "entrypoints": [
     "static/css/main.7481c972.css",
-    "static/js/main.b3d8624d.js"
+    "static/js/main.31f2ff66.js"
   ]
 }
