@@ -1,0 +1,109 @@
+[
+    {
+        "id": 1,
+        "name": "Clean Bot (CB)",
+        "date": "August 2018 - December 2019",
+        "flavorText": "A cleaning robot developed using the Lego NXT Platform",
+        "desc":
+          "Cleanbot, nicknamed CB, was a robot I built as a high school senior for my graduation project. CB was built off of the Lego NXT platform with a few modifications to accomodate a rotating broom arm and dustpan. CB could move, sweep, and avoid obstacles just like a Roomba. Unlike a Roomba, Cleanbot used a ultrasonic sensor to observe its environment.",
+        "img": "./assets/media/media/cb.png",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": false,
+        "visualizationIndex": null
+    },
+    {
+        "id": 2,
+        "name": "D.R. Wilk Contracting Website",
+        "date": "December 2021",
+        "flavorText": "A website created for D.R. Wilk Contracting",
+        "desc":
+          "D.R. Wilk Contracting is my Dad's business he has been running for 20+ years. His company has a presence on Facebook but an outdated website. As a winter project and test of my React knowledge, I created a website for him. I will place a link here once it is hosted",
+        "img": "./assets/media/media/drWilk.png",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": false,
+        "visualizationIndex": null
+    },
+    {
+        "id": 3,
+        "name": "Ghoul Game",
+        "date": "October 2021",
+        "flavorText": "A simple web game made for VolHacks V",
+        "desc":
+          "Ghoul Game is a web game me and my partner Nick Jackson created at our first hackathon. The premise is simple, click to increase your score, but watch out! There is a chance that the Ghoul will appear. When the Ghoul appears, you will lose all of your points. The game was created using Django, PostgreSQL, JavaScript, HTML, and CSS",
+        "img": "./assets/media/media/ghoul_game.png",
+        "hasLink": true,
+        "link": "https://github.com/Robert-Wilk/Ghoul-Game",
+        "isVisualization": false,
+        "visualizationIndex": null
+    },
+    {
+        "id": 4,
+        "name": "Big Brain Bot",
+        "date": "October 2019",
+        "flavorText":
+          "A Discord bot created in Java during my first semester of university",
+        "desc":
+          "As an avid user of discord, I wanted to created a discord bot of my own. Using my limited programming knowledge, I gave the bot a few commands for users to test. I plan to come back to this bot to add extra features and possible change it over to JavaScript",
+        "img": "./assets/media/media/bigbrain.jpg",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": false,
+        "visualizationIndex": null
+    },
+    {
+        "id": 5,
+        "name": "Github Languages Visualization",
+        "date": "January 2022",
+        "flavorText":
+          "A visualization of programming languages on Github",
+        "desc": "",
+        "img": "./assets/media/media/githubLogo.png",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 0
+    },
+    {
+        "id": 6,
+        "name": "Stellar Classification",
+        "date": "Feburary 2022",
+        "flavorText":
+          "A visualization on celestial bodies",
+        "desc": "",
+        "img": "./assets/media/media/qyasar.jpg",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 1
+    },
+    {
+        "id": 7,
+        "name": "House Price Regression",
+        "date": "March 2022",
+        "flavorText":
+          "Housing Price Regression for Kaggle Competition",
+        "desc":
+          "",
+        "img": "./assets/media/media/house.png",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 2
+    },
+    {
+        "id": 8,
+        "name": "Clustering Netflix",
+        "date": "April 2022",
+        "flavorText":
+          "A basic Netflix recommender system using K-Means Clustering",
+        "desc":
+          "",
+        "img": "./assets/media/media/netflixRecommend.png",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 3
+    }
+]

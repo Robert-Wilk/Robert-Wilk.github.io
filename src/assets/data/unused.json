@@ -1,0 +1,14 @@
+{
+    "id": 0,
+    "name": "My Website",
+    "date": "June 2021",
+    "flavorText":
+      "Personal website project to showcase my work and learn front-end development",
+    "desc":
+      "I started working on my personal portfolio website in June 2021. In the beginning, it was made with plain HTML and CSS. As of January 2021, I have updated the website to use React Js and given it a remodel.",
+    "img": "./assets/media/media/android-chrome-512x512.png",
+    "hasLink": true,
+    "link": "https://robert-wilk.github.io/",
+    "isVisualization": false,
+    "visualizationIndex": null
+}

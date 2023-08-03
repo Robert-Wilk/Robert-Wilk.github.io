@@ -1,0 +1,23 @@
+.carousel-wrapper {
+    margin-top: 150px;
+    margin-bottom: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.carousel {
+    display: flex;
+    margin: auto;
+}
+.carousel img {
+    height: 400px;
+    width: 400px !important;
+    margin: auto;
+}
+.carousel-control-prev, .carousel-control-next {
+    background-color: var(--red-light);
+    border-radius: 10px;
+    width: auto;
+    height: fit-content;
+    margin: auto;
+    padding: 20px;
+}
