@@ -1,12 +1,14 @@
 <div class="container hero-section">
-    <div>
+    <div class="left">
         <p>Hello, I am</p>
         <h2>Robert Wilk</h2>
-        <p>A passionate full-stack developer dedicated to creating robust and intuitive solutions.</p>
-        <a [routerLink]="['/projects']">Projects</a>
-        <a [routerLink]="['/about']">Read More</a>
+        <p class="flavor-text">A passionate full-stack developer dedicated to creating robust and innovative solutions.</p>
+        <div class="hero-btn-group">
+            <a role="button" class="btn-main margin-right" [routerLink]="['/projects']">Projects</a>
+            <a role="button" class="btn-outline" [routerLink]="['/about']">Read More</a>
+        </div>
     </div>
-    <div>
-        <img src="./../../assets/media/stone-chadjack.png">
+    <div class="right">
+        <img src="./../../assets/media/mewithsnow.jpg" alt="picture of Robert Wilk">
     </div>
 </div>

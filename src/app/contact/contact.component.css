@@ -1,0 +1,209 @@
+* {
+    color: black;
+}
+.content {
+    margin-top: 3rem;
+    min-height: calc(100vh - 90px - 293px); /* TODO make responsive */
+}
+.page-header {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.page-header h1 {
+    margin-bottom: 0;
+}
+.icon-header {
+    background: -webkit-linear-gradient(-45deg, var(--red-light), var(--purple-light));
+    width: 2.8rem !important;
+    height: 2.8rem !important;
+    margin-left: 1rem;
+}
+.big-text {
+    font-family: oswald;
+    font-weight: bold;
+    font-size: 6rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+
+    width:fit-content;
+    background: -webkit-linear-gradient(0deg, var(--red-light), var(--purple-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200% 200%;
+	animation: gradient 3s ease infinite;
+}
+.contact-content {
+    display: flex;
+    margin-top: 3rem;
+}
+.left, .right {
+    flex: 1 1 0%;
+}
+.left {
+    position: relative;
+    height: 100%;
+    border-right: 6px solid var(--purple-light);
+    padding-right: 50px;
+    margin-right: 50px;
+}
+.right {
+    position: relative;
+    height: 100%;
+}
+.social-list {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+a {
+    text-decoration: none;
+}
+.social-list a {
+    font-size: 2.2rem;
+    margin-left: 20px;
+}
+.icon {
+    width: 2.6rem !important;
+    height: 2.6rem !important;
+}
+.github:hover a {
+    color: #c9510c;
+}
+.github:hover .icon {
+    background-color: #c9510c;
+    animation: spin 1.5s ease-in-out;
+}
+.linkedin:hover a {
+    color: #0a66c2;
+}
+.linkedin:hover .icon {
+    background-color: #0a66c2;
+    transform-origin: bottom left;
+    animation: slam 1.5s ease-in;
+}
+.github, .linkedin, .twitter {
+    display: flex;
+    align-items: center;
+}
+.twitter:hover .twitter-text {
+    color: #1da1f2;
+}
+.twitter:hover .icon {
+    background-color: #1da1f2;
+}
+.swap-box {
+    position: relative;
+    height: 2.6rem;
+    width: 2.6rem;
+}
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .4s ease-out;
+}
+.twitter:hover .front {
+    transform: perspective(1000px) rotateY(-180deg);
+}
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
+    width: 2.6rem !important;
+    height: 2.6rem !important;
+}
+.twitter:hover .back {
+    transform: perspective(1000px) rotateY(0deg);
+}
+.flavor-text {
+    font-size: 1.1rem !important;
+}
+
+@media only screen and (max-width: 380px) {
+    .right {
+        padding: 0;
+        border: 0;
+        margin: 1rem auto;
+    }
+    .big-text {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 530px) and (min-width: 380px) {
+    .content {
+        margin-bottom: .35rem;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 530px) {
+    .content {
+        margin-bottom: 4.7rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+        min-height: calc(100vh - 90px - 450px);
+        margin-top: 0;
+    }
+    .left {
+        border-right: 0;
+        padding-right: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 380px) {
+    .right {
+        margin: 3rem auto;
+        padding: 2rem;
+        border: 4px solid var(--red-light);
+        border-radius: 12px;
+    }
+    .big-text {
+        font-size: 4rem;
+    }
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes spin {
+    0% {
+		transform: rotateZ(0deg);
+	}
+    100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes slam {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    40% {
+        transform: rotateZ(-45deg);
+    }
+    60% {
+        transform: rotateZ(0deg);
+    }
+}

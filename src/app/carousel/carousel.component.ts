@@ -1,23 +1,16 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { CarouselDataService } from '../services/carousel-data/carousel-data.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CarouselDataService } from './carousel-data.service';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarouselComponent {
   
-  slides: any[] = [];
+  slides$ = this.carouselDataService.carouselData$;
 
   constructor(private carouselDataService: CarouselDataService) { }
 
-  ngOnInit(): void {
-    this.getCarouselData();
-  }
-
-  getCarouselData(): void {
-    this.carouselDataService.get()
-    .subscribe((data: any) => this.slides = data);
-  }
 }

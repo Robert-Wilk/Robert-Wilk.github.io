@@ -1,1 +1,30 @@
-<p>footer works!</p>
+<footer>
+    <div class="container footer-container">
+        <div class="logo-and-text">
+            <a class="logo">
+                <img src="../../../assets/media/stone-chadjack.png"/>
+            </a>
+            <span>Design by Robert Wilk | Sept. 2023</span>
+        </div>
+        <ul class="socials">
+            <li class="social">
+                <a href="https://www.linkedin.com/in/robertmwilk" target="_blank" rel="noreferrer">
+                    <app-svg-icon class="icon" [path]="linkedin"></app-svg-icon>
+                </a>
+            </li>
+            <li class="social">
+                <a href="https://github.com/Robert-Wilk" target="_blank" rel="noreferrer">
+                    <app-svg-icon class="icon" [path]="github"></app-svg-icon>
+                </a>
+            </li>
+            <li class="social">
+                <a href="https://twitter.com/robert_wilk_" target="_blank" rel="noreferrer">
+                    <app-svg-icon class="icon" [path]="twitter"></app-svg-icon>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div style="display: flex;">
+        <button class="btn-white" (click)="backToTop()">Back to Top</button>
+    </div>
+</footer>

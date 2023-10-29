@@ -1,34 +1,36 @@
-.b-wave {
-    background-image: url("../../assets/media/wave.svg");
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1200px;
-    margin-top: 5%;
-    padding-top: 15%;
-}
-.studies-text {
+h1 {
     text-align: center;
-    color: var(--black);
+    margin-bottom: 2rem;
 }
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    gap: 20px 0;
+.interests {
+    display: flex;
+    gap: 8rem;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
-.img-grid-wrapper {
-    width: 125px;
-    height: 125px;
+.interest {
+    text-align: center;
 }
-.image-grid img {
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-    transition: 200ms ease-in-out;
+.title {
+    color: var(--red-light);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.desc {
+    margin-top: 1rem;
+}
+.icon {
+    background-color: var(--red-light);
+    width: 1.5rem !important;
+    height: 1.5rem !important;
 }
 
-.image-grid img:hover {
-    width: 125px;
-    height: 125px;
-}
+@media only screen and (max-width: 992px) {
+    .interests {
+      flex-direction: column;
+      max-width: 350px;
+      margin: 0 auto;
+      margin-top: 5rem;
+      gap: 5rem;
+    }
+  }

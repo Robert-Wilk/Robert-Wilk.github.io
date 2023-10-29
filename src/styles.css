@@ -13,9 +13,19 @@
     --red-light: #CB3F3F;
     --purple-light: #803FCB;
 }
-
 body {
     margin: 0;
+}
+.header-style {
+    color: var(--black) !important;
+    font-size: 2rem;
+    margin-bottom: 2rem !important;
+}
+h1, h2, p {
+    color: var(--black);
+}
+.red {
+    color: var(--red-light) !important;
 }
 
 .container {
@@ -26,6 +36,64 @@ body {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+}
+
+.btn-main {
+    background-color: var(--red-light);
+    color: var(--white) !important;
+    border-radius: 10px;
+    padding: 15px 30px;
+    border: 3px solid var(--red-light);
+    transition: 200ms ease-in-out;
+}
+.btn-main:hover {
+    color: white !important;
+}
+.btn-outline {
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 3px solid var(--red-light);
+    padding: 15px 30px;
+    color: var(--red-light) !important;
+    transition: 200ms ease-in-out;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-outline:hover {
+    color: var(--red-light) !important;
+}
+.btn-white {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 200ms ease-in-out;
+}
+.btn-white:hover, .btn-main:hover {
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0) !important;
+}
+.btn-outline:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.carousel-caption {
+    color: var(--white);
+}
+.carousel-caption p {
+    color: var(--white);
+}
+.carousel-indicators {
+    bottom: -4rem !important;
+}
+.carousel-control-next:hover, .carousel-control-prev:hover{
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0) !important;
+    transition: 200ms ease-in;
+}
+.carousel-indicators button {
+    background: -webkit-linear-gradient(0deg, var(--red-light), var(--purple-light));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 @media (min-width: 576px) {

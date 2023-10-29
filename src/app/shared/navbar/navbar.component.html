@@ -1,5 +1,7 @@
-<nav>
+<app-svg-icon class="nav-btn" [ngClass]="{'nav-btn-on': !showNav}" [path]="'assets/icons/hamburger.svg'" (click)="toggleNav()"></app-svg-icon>
+<nav [ngClass]="{'show-nav': showNav, 'hide-nav': !showNav}">
     <div class="container">
+        <app-svg-icon class="nav-btn-mobile" [path]="'assets/icons/close.svg'" (click)="toggleNav()"></app-svg-icon>
         <ul>
             <li class="logo">
                 <span>Robert Wilk</span>

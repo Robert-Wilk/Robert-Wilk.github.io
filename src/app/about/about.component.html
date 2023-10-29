@@ -1,0 +1,279 @@
+<div class="container content">
+    <div class="page-header">
+        <h1>About</h1>
+        <app-svg-icon class="icon-header" [path]="'assets/icons/info.svg'"></app-svg-icon>
+    </div>
+    <section class="about-section-top">
+        <div class="left">
+            <h2 class="about-title">Robert Wilk</h2>
+            <div class="about-para">
+                <p>I am a student at the University of North Carolina at Charlotte. At UNC Charlotte, I am majoring in Computer Science with a concentration in AI, robotics, and gaming, with minoring in Computer Engineering.
+                    <br><br>
+                    I have many things I like to do in my free time. I like to play video games, go rock climbing/bouldering, go longboarding, build/launch rockets, and learn about front-end development.
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="../../assets/media/mewithboard.jpg" alt="About Section image">
+        </div>
+    </section>
+    <div class="button-section">
+        <button class="btn-main" (click)="isVisible = !isVisible">{{ isVisible ? 'Hide Resume' : 'Show Resume'}}</button>
+        <a role="button" href="../../assets/data/resume.pdf" download="resume.pdf" class="btn-outline"><app-svg-icon class="icon-mini" [path]="'assets/icons/download.svg'"></app-svg-icon>Download Resume</a>
+    </div>
+    <ng-template [ngIf]="isVisible" class="about-section resume">
+        <!-- Education -->
+        <section id="education">
+            <div class="resume-header">
+                <h2 class="resume-title">Education</h2>
+                <app-svg-icon class="icon" [path]="'assets/icons/cap.svg'"></app-svg-icon>
+            </div>
+            <div class="resume-content">
+                <div class="resume-content-heading">
+                        <h3>University of North Carolina at Charlotte</h3>
+                        <p>Charlotte, NC</p>
+                </div>
+                <div class="resume-content-heading">
+                    <div>
+                        <p class="red">Bachelor of Science in Computer Science</p>
+                        <em>summa cum laude</em>
+                    </div>
+                    <p>December 2022</p>
+                </div>
+                <div class="education-info">
+                    <ul class="no-decoration">
+                        <li>
+                            <p>
+                            <strong>GPA: </strong>3.94
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                            <strong>Concentration: </strong>Artificial Intelligence,
+                            Robotics, Gaming
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                            <strong>Minor: </strong>Computer Engineering
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Awards:</strong>
+                            <ul>
+                                <li><u>Chancellor's List:</u> Fall: 2019, 2020, 2021, 2022 | Spring: 2021, 2022</li>
+                                <li><u>Dean's List:</u> Spring: 2020</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Awards -->
+        <section id="awards">
+            <div class="resume-header">
+                <h2 class="resume-title">Awards</h2>
+                <app-svg-icon class="icon" [path]="'assets/icons/award.svg'"></app-svg-icon>
+            </div>
+            <div class="resume-content">
+                <div class="resume-content-heading">
+                    <h3>AZ-900</h3>
+                    <p>March 2023</p>
+                </div>
+                <div class="resume-content-heading">
+                    <p class="red">Microsoft</p>
+                </div>
+                <p>The Azure Fundamentals certification (AZ-900) have demonstrated foundational level knowledge of cloud services and how those services are provided with Microsoft Azure</p>
+            </div>
+        </section>
+        <!-- Skills -->
+        <section id="skills">
+            <div class="resume-header">
+                <h2 class="resume-title">Skills</h2>
+                <app-svg-icon class="icon" [path]="'assets/icons/chip.svg'"></app-svg-icon>
+            </div>
+            <div class="resume-content">
+                <h3>Programming</h3>
+                <p>C++, HTML/CSS, Java, JavaScript/TypeScript, Matlab, Python, SQL</p>
+                <h3>Frameworks</h3>
+                <p>Angular, Express, Jupyter Notebook, OpenCV, React, ROS, .NET</p>
+                <h3>Software</h3>
+                <p>Git, Github, Jenkins, Jira, Microsoft Azure, Microsoft 365</p>
+            </div>
+        </section>
+        <!-- Experience -->
+        <section id="experience">
+            <div class="resume-header">
+                <h2 class="resume-title">Experience</h2>
+                <app-svg-icon class="icon" [path]="'assets/icons/briefcase.svg'"></app-svg-icon>
+            </div>
+            <div class="resume-content">
+                <section id="program-analyst">
+                    <div class="resume-content-heading">
+                        <h3>Program Analyst</h3>
+                        <p>Charlotte, NC</p>
+                    </div>
+                    <div class="resume-content-heading">
+                        <p class="red">Wells Fargo</p>
+                        <p>February 2023 - Current</p>
+                    </div>
+                    <ul class="no-padding list-alt">
+                        <li>
+                            Complete Unit Test cases to improve API code coverage from 40% to 95%
+                        </li>
+                        <li>
+                            Developed error handling and logging solution for an API to improve developer application insights
+                        </li>
+                        <li>
+                            Led small team of interns on a Power BI project for an applicatio's technology suite upgrade
+                        </li>
+                        <li>
+                            Implement user interface changes that provide more insight into user's interaction and authentication patterns
+                        </li>
+                    </ul>
+                </section>
+                <hr>
+                <section id="ta">
+                    <div class="resume-content-heading">
+                        <h3>Instructional Assistant</h3>
+                        <p>Charlotte, NC</p>
+                    </div>
+                    <div class="resume-content-heading">
+                        <p class="red">University of North Carolina at Charlotte</p>
+                        <p>August 2022 - December 2022</p>
+                    </div>
+                    <ul class="no-padding list-alt">
+                        <li>
+                            Schedule office hours and one-on-one meetings to ensure student success
+                        </li>
+                        <li>
+                            Prepare quizzes, homework, and exams to measure students' understanding of course concepts
+                        </li>
+                        <li>
+                            Organize presentations to review with students based on feedback from quizzes, homework, and exams
+                        </li>
+                        <li>
+                            Communicate student feedback to the professor to adapt course materials
+                        </li>
+                    </ul>
+                </section>
+                <hr>
+                <section id="intern-analyst">
+                    <div class="resume-content-heading">
+                        <h3>Technology Intern Analyst</h3>
+                        <p>Charlotte, NC</p>
+                    </div>
+                    <div class="resume-content-heading">
+                        <p class="red">Wells Fargo</p>
+                        <p>June 2022 - August 2022</p>
+                    </div>
+                    <ul class="no-padding list-alt">
+                        <li>
+                            Developed complex user interfaces using Angular for internal tools under the Liquidity and Risk Management Department
+                        </li>
+                        <li>
+                            Prepared and presented at meetings with senior-level executives, developers and other interns
+                        </li>
+                        <li>
+                            Implement user interfaces apart of a new application that would increase productivity of senior managers
+                        </li>
+                        <li>
+                            Participate in Agile development practices
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+        <!-- Organization -->
+        <section id="organizations">
+            <div class="resume-header">
+                <h2 class="resume-title">Organizations</h2>
+                <app-svg-icon class="icon" [path]="'assets/icons/people.svg'"></app-svg-icon>
+            </div>
+            <div class="resume-content">
+                <section id="treasurer">
+                    <div class="resume-content-heading">
+                        <h3>IEE Eta Kappa Nu - Kappa Phi Chapter</h3>
+                        <p>Charlotte, NC</p>
+                    </div>
+                    <div class="resume-content-heading">
+                        <div>
+                            <p class="red">University of North Carolina at Charlotte</p>
+                            <em>Treasurer</em>
+                        </div>
+                        <p>December 2021 - December 2022</p>
+                    </div>
+                    <ul class="no-padding list-alt">
+                        <li>
+                            Re-establish Eta Kappa Nu Honor Society at the University of North Carolina at Charlotte
+                        </li>
+                        <li>
+                            Plan and execute events such as induction ceremonies and guest speakers for general body members
+                        </li>
+                        <li>
+                            Organize and manage funding for multiple events including induction ceremonies and guest speakers
+                        </li>
+                        <li>
+                            Serve on the executive board as treasurer since founding in December 2021 until graduation December 2022
+                        </li>
+                        <li>
+                            Plan and execute events such as induction ceremonies, networking events, and Student Leadership Conference for general body members
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+        <!-- Research -->
+        <section id="research">
+            <div class="resume-header">
+                <h2 class="resume-title">Research</h2>
+                <app-svg-icon class="icon" [path]="'assets/icons/beaker.svg'"></app-svg-icon>
+            </div>
+            <div class="resume-content">
+                <section id="safety">
+                    <div class="resume-content-heading">
+                        <h3>Guaranteeing Safety in Multi-Robot Scenarios</h3>
+                        <p>Charlotte, NC</p>
+                    </div>
+                    <div class="resume-content-heading">
+                        <p class="red">University of North Carolina at Charlotte</p>
+                        <p>March 2022 - December 2022</p>
+                    </div>
+                    <ul class="no-padding list-alt">
+                        <li>
+                            Develop algorithms to control Khepera IV robots in CoppeliaSim (formerly VREP) and the real-world
+                        </li>
+                        <li>
+                            Analyze research papers on control barrier functions and safety barrier certificates
+                        </li>
+                        <li>
+                            Implement safety algorithms using Probabilistic Safety Barrier Certificates on group of Khepera IV robots under direction of faculty
+                        </li>
+                    </ul>
+                </section>
+                <hr>
+                <section id="cleanbot">
+                    <div class="resume-content-heading">
+                        <h3>Clean Bot - A Use Case for AI and Robotics</h3>
+                        <p>Charlotte, NC</p>
+                    </div>
+                    <div class="resume-content-heading">
+                        <p class="red">South Mecklenburg High School</p>
+                        <p>August 2018 - December 2018</p>
+                    </div>
+                    <ul class="no-padding list-alt">
+                        <li>
+                            Designed and constructed a robot utilizing Lego Mindstorms NXT platform
+                        </li>
+                        <li>
+                            Wrote a program that allowed the robot to move around a room and sweep up dirt
+                        </li>
+                        <li>
+                            Utilized and programed an ultrasonic sensor to avoid obstacles by adjusting the robot's velocity
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </ng-template>
+</div>

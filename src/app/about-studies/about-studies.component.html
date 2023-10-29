@@ -1,10 +1,10 @@
-<div class="b-wave">
-    <div class="container studies-text">
-        <h2>Skills</h2>
-        <div class="image-grid">
-            <div class="img-grid-wrapper" *ngFor="let url of urls">
-                <img src="{{url}}" />
-            </div>
+<div class="container">
+    <h1 class="header-style">My Interests</h1>
+    <div class="interests">
+        <div *ngFor="let interest of interests" class="interest">
+            <app-svg-icon class="icon" [path]="interest.icon"></app-svg-icon>
+            <h3 class="title">{{ interest.title }}</h3>
+            <p class="desc">{{ interest.desc }}</p>
         </div>
     </div>
 </div>

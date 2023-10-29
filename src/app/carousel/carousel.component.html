@@ -1,22 +1,22 @@
-<div class="container carousel-wrapper">
-    <c-carousel [interval]="5000" transition="crossfade" [dark]="true">
-        <c-carousel-indicators></c-carousel-indicators>
-        <c-carousel-inner>
-          <c-carousel-item *ngFor="let slide of slides">
-            <img
-              alt="{{slide.title}}"
-              class="d-block w-100"
-              loading="lazy"
-              src="{{slide.src}}"
-            />
-            <c-carousel-caption class="d-none d-md-block">
-              <h3>{{slide.title}}</h3>
-              <p>{{slide.subtitle}}</p>
-            </c-carousel-caption>
-          </c-carousel-item>
-        </c-carousel-inner>
-        <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
-        <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
-      </c-carousel>
+<div class="container carousel-wrapper" *ngIf="slides$ | async as slides">
+  <h1 class="header-style">Recent Projects</h1>
+  <c-carousel  [interval]="500000" transition="crossfade">
+    <c-carousel-indicators></c-carousel-indicators>
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let slide of slides">
+        <img
+          alt="{{slide.title}}"
+          class="{{slide.imgClass}}"
+          loading="lazy"
+          [src]="slide.src"
+        />
+        <c-carousel-caption class="d-none d-md-block" [ngClass]="{'dark': slide.isDark, 'h-dark': slide.id == 5 || slide.id == 0 }">
+          <h3>{{slide.title}}</h3>
+          <p>{{slide.subtitle}}</p>
+        </c-carousel-caption>
+      </c-carousel-item>
+    </c-carousel-inner>
+    <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+    <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+  </c-carousel>
 </div>
-<img src="{{slides[0].src}}">
