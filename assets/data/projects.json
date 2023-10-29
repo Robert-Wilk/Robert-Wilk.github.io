@@ -1,0 +1,185 @@
+[
+    {
+      "id": 0,
+      "name": "My Website",
+      "date": "June 2021 - Current",
+      "flavorText":
+        "Personal website project to showcase my work and learn front-end development",
+      "desc":
+        "I started working on my personal portfolio website in June 2021. In the beginning, it was made with plain HTML and CSS as I had just started learning web-development. Throughout 2022, I remade the website using React to improve updatability and learn new skills. In 2023, I made the switch to Angular to continue learning new web-development skills.",
+      "img": "./../../assets/media/android-chrome-512x512.png",
+      "hasLink": true,
+      "link": "https://github.com/Robert-Wilk/Robert-Wilk.github.io",
+      "isVisualization": false,
+      "visualizationIndex": null,
+      "isDark": false
+    },  
+    {
+        "id": 1,
+        "name": "Clean Bot (CB)",
+        "date": "August 2018 - December 2019",
+        "flavorText": "A cleaning robot developed using the Lego NXT Platform",
+        "desc":
+          "Cleanbot, nicknamed CB, was a robot I built as a high school senior for my graduation project. CB was built off of the Lego NXT platform with a few modifications to accomodate a rotating broom arm and dustpan. CB could move, sweep, and avoid obstacles just like a Roomba. Unlike a Roomba, Cleanbot used a ultrasonic sensor to observe its environment.",
+        "img": "./../../assets/media/cb.png",
+        "imgClass": "img-cb",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": false,
+        "visualizationIndex": null,
+        "isDark": false
+    },
+    {
+        "id": 2,
+        "name": "D.R. Wilk Contracting Website",
+        "date": "December 2021",
+        "flavorText": "A website created for D.R. Wilk Contracting",
+        "desc":
+          "D.R. Wilk Contracting is my Dad's business he has been running for 20+ years. His company has a presence on Facebook and Instagramm but had an outdated website. As a side project, I created a website for him and his amazing work.",
+        "img": "./../../assets/media/drwc.png",
+        "imgClass": "img-drWilk",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": false,
+        "visualizationIndex": null,
+        "isDark": false
+    },
+    {
+        "id": 3,
+        "name": "Ghoul Game",
+        "date": "October 2021",
+        "flavorText": "A simple web game made for VolHacks V",
+        "desc":
+          "Ghoul Game is a web game me and my partner Nick Jackson created at our first hackathon. The premise is simple, click to increase your score, but watch out! There is a chance that the Ghoul will appear. When the Ghoul appears, you will lose all of your points. The game was created using Django, PostgreSQL, JavaScript, HTML, and CSS.",
+        "img": "./../../assets/media/ghoul_game.png",
+        "imgClass": "img-ghoulGame",
+        "hasLink": true,
+        "link": "https://github.com/Robert-Wilk/Ghoul-Game",
+        "isVisualization": false,
+        "visualizationIndex": null,
+        "isDark": true
+    },
+    {
+        "id": 4,
+        "name": "Big Brain Bot",
+        "date": "October 2019",
+        "flavorText":
+          "A Discord bot created in Java during my first semester of university",
+        "desc":
+          "As an avid user of discord, I wanted to created a discord bot of my own. Using my limited programming knowledge, I gave the bot a few commands for users to test. I plan to come back to this bot to add extra features and possible change it over to JavaScript.",
+        "img": "./../../assets/media/bigbrain.jpg",
+        "imgClass": "img-bigBrain",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": false,
+        "visualizationIndex": null,
+        "isDark": false
+    },
+    {
+        "id": 5,
+        "name": "Github Languages Visualization",
+        "date": "January 2022",
+        "flavorText":
+          "A visualization of programming languages on Github",
+        "desc": "",
+        "img": "./../../assets/media/githubLogo.png",
+        "imgClass": "img-github",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 0,
+        "isDark": false
+    },
+    {
+        "id": 6,
+        "name": "Stellar Classification",
+        "date": "Feburary 2022",
+        "flavorText":
+          "A visualization on celestial bodies",
+        "desc": "",
+        "img": "./../../assets/media/quasar.jpg",
+        "imgClass": "img-quasar",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 1,
+        "isDark": false
+    },
+    {
+        "id": 7,
+        "name": "House Price Regression",
+        "date": "March 2022",
+        "flavorText":
+          "Housing Price Regression for Kaggle Competition",
+        "desc":
+          "",
+        "img": "./../../assets/media/house.png",
+        "imgClass": "img-house",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 2,
+        "isDark": false
+    },
+    {
+        "id": 8,
+        "name": "Clustering Netflix",
+        "date": "April 2022",
+        "flavorText":
+          "A basic Netflix recommender system using K-Means Clustering",
+        "desc":
+          "",
+        "img": "./../../assets/media/netflixRecommend.png",
+        "imgClass": "img-netflix",
+        "hasLink": false,
+        "link": "",
+        "isVisualization": true,
+        "visualizationIndex": 3,
+        "isDark": true
+    },
+    {
+      "id": 9,
+      "name": "Angle Financial",
+      "date": "Feburary 2022 - April 2022",
+      "flavorText": "MEAN-stack online banking application for a ficitional Bank",
+      "desc":
+        "MEAN-stack Bank app is a banking application for the fictional bank 'Angle Financial' that is modeled after a typical online banking experience. The application uses the MEAN-stack (MongoDb, Express.js, Angular, and Node).",
+      "img": "./../../assets/media/angle-financial.png",
+      "imgClass": "img-ghoulGame",
+      "hasLink": true,
+      "link": "https://github.com/Robert-Wilk/MEAN-bank-app",
+      "isVisualization": false,
+      "visualizationIndex": null,
+      "isDark": true
+    },
+    {
+      "id": 10,
+      "name": "Money Recognition",
+      "date": "Feburary 2022 - April 2022",
+      "flavorText": "Final Project for ITCS 4152/5152 that can detect United States currency (dollar bills and coins)",
+      "desc":
+        "Currency Recognition can be beneficial for people with special needs and banks (Ex: couting the number of bills someone might have or counterfeit detection). As a team (Soji Ademiluyi, Ben Gambil, Fausto German Jimenez, Joshua Wygal and Myself), we developed a model that can detect the most common kinds of dollar bills and coins used in the United States.",
+      "img": "./../../assets/media/money.png",
+      "imgClass": "",
+      "hasLink": true,
+      "link": "https://github.com/faustotnc/us-currency-recognition",
+      "isVisualization": false,
+      "visualizationIndex": null,
+      "isDark": true
+    },
+    {
+      "id": 11,
+      "name": "Mutli-Robot Collision Safety",
+      "date": "April 2022 - December 2022",
+      "flavorText": "Collision-free Coordinated Behaviors for Multi-Robot Systems",
+      "desc":
+        "The rise in popularity of autonomous systems raises concerns for safety. Regardless of the problem the autonomous system is solving, the robots within must perform their actions in a safe manner. My research, under the direction of Dr. Wenhao Luo, explores the concept of Probabilistic Safety Barrier Certificates to minimally modify an existing robot controller to provide probabilistic safety. Experiments were done in both a simulated environment and the real-world.",
+      "img": "./../../assets/media/robots.png",
+      "imgClass": "img-robot",
+      "hasLink": true,
+      "link": "https://github.com/Robert-Wilk/KheperaIV-Safety-Research",
+      "isVisualization": false,
+      "visualizationIndex": null,
+      "isDark": true
+    }
+]
