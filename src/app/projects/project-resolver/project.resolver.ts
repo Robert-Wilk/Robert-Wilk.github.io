@@ -48,8 +48,11 @@ export const vizResolver: ResolveFn<VisualizationResolved> =
 
       if (isNaN(id)) {
         const message = `Visualization id was not a number: ${id}`;
-        return of({ visualization: null, error: message });
+        return of({ visualization: null, name: null, error: message });
       }
+
+      var name = '';
+      visualizationService.getName(id).subscribe(x => name = x);
 
     return visualizationService.getVisualization(id)
       .pipe(
@@ -57,10 +60,10 @@ export const vizResolver: ResolveFn<VisualizationResolved> =
           if (!viz)
             throw new Error('Visualization could not be found');
         }),
-        map(viz => ({ visualization: viz, error: '' })),
+        map(viz => ({ visualization: viz, name: name, error: '' })),
         catchError(error => {
           const message = `Retrieval error: ${error.message}`;
-          return of({ visualization: null, error: message });
+          return of({ visualization: null, name: null, error: message });
         })
       );
 }

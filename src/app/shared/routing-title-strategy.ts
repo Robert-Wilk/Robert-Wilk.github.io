@@ -14,4 +14,7 @@ export class RoutingTitleStrategy extends TitleStrategy {
       this.title.setTitle(`Robert Wilk | ${title}`);
     }
   }
+  setTitle(title: string) {
+    this.title.setTitle(`Robert Wilk | ${title}`);
+  }
 }

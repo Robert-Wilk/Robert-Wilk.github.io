@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectResolved } from '../Project';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
+import { RoutingTitleStrategy } from 'src/app/shared/routing-title-strategy';
 
 @Component({
   selector: 'app-project',
@@ -14,11 +15,13 @@ export class ProjectComponent implements OnInit {
   project = this.resolvedData.project;
   errorMessage = this.resolvedData.error;
 
-  constructor(private route: ActivatedRoute, private location: Location, private router: Router) { }
+  constructor(private route: ActivatedRoute, private location: Location, private router: Router, private title: RoutingTitleStrategy) { }
 
   ngOnInit(): void {
     if (this.project?.isVisualization)
       this.router.navigate(['projects', 'viz', this.project.visualizationIndex]);
+
+    this.title.setTitle(this.project?.name || '');
   }
 
   back(): void {
