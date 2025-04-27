@@ -9,7 +9,7 @@ export class EmailComponent {
   showCopiedPopup = false;
 
   copy() {
-    const text = 'Business.robertwilk@gmail.com';
+    const text = 'TBD';
     navigator.clipboard.writeText(text).then(() => {
       this.showCopiedPopup = true;
       setTimeout(() => {

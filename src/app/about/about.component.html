@@ -19,7 +19,7 @@
     </section>
     <div class="button-section">
         <button class="btn-main" (click)="isVisible = !isVisible">{{ isVisible ? 'Hide Resume' : 'Show Resume'}}</button>
-        <a role="button" href="../../assets/data/resume.pdf" download="resume.pdf" class="btn-outline"><app-svg-icon class="icon-mini" [path]="'assets/icons/download.svg'"></app-svg-icon>Download Resume</a>
+        <a role="button" href="../../assets/data/resume.png" download="resume.pdf" class="btn-outline"><app-svg-icon class="icon-mini" [path]="'assets/icons/download.svg'"></app-svg-icon>Download Resume</a>
     </div>
     <ng-template [ngIf]="isVisible" class="about-section resume">
         <!-- Education -->
