@@ -22,6 +22,7 @@ export class AppComponent {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
+        window.scrollTo(0, 0);
         // Trigger animation on each navigation event
         this.showAnimation = false; // Temporarily set to false to trigger the animation
         setTimeout(() => {

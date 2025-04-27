@@ -9,32 +9,32 @@ export class DoggoComponent {
   photos = [
     {
       url: '../../assets/media/dog/IMG_1689.JPG',
-      description: 'Mountain landscape',
+      description: 'Kane laying on the deck',
       size: 'large'
     },
     {
       url: '../../assets/media/dog/IMG_1362.JPG',
-      description: 'Lake view',
+      description: 'Kane laying in the grass',
       size: 'normal'
     },
     {
       url: '../../assets/media/dog/IMG_1813.JPG',
-      description: 'Lake view',
+      description: 'Kane smiling at camera',
       size: 'normal'
     },
     {
       url: '../../assets/media/dog/IMG_1925.JPG',
-      description: 'Beach sunset',
+      description: 'Kane knawing on stick',
       size: 'large'
     },
     {
       url: '../../assets/media/dog/IMG_2079.JPG',
-      description: 'Forest pathway',
+      description: 'Kane sitting in tall grass',
       size: 'tall'
     },
     {
       url: '../../assets/media/dog/IMG_2162.JPG',
-      description: 'City lights',
+      description: 'Kane playing tug-of-war',
       size: 'tall'
     }
   ];

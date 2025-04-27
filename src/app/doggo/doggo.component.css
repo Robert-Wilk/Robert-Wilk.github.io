@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+    margin-top: 3rem;
+}
 .collage-container {
     display: grid;
     gap: 16px;
