@@ -1,30 +1,32 @@
 <footer>
-    <div class="container footer-container">
-        <div class="logo-and-text">
-            <a class="logo">
-                <img src="../../../assets/media/stone-chadjack.png"/>
-            </a>
-            <span>Design by Robert Wilk | Sept. 2023</span>
+    <div class="container">
+        <div class="site-info">
+            <p class="logo">Robert Wilk</p>
+            <p>Last Updated April 2025</p>
+            <a class="dog" [routerLink]="['/doggo']">Dog</a>
         </div>
-        <ul class="socials">
-            <li class="social">
-                <a href="https://www.linkedin.com/in/robertmwilk" target="_blank" rel="noreferrer">
+        <div class="footer-list">
+            <p class="footer-header">Pages</p>
+            <a [routerLink]="['/home']">Home</a>
+            <a [routerLink]="['/about']">About</a>
+            <a [routerLink]="['/projects']">Projects</a>
+            <a [routerLink]="['/contact']">Contact</a>
+        </div>
+        <div class="footer-list">
+            <p class="footer-header">Connect With Me</p>
+            <a [routerLink]="['/email']">Email</a>
+            <a href="../../assets/data/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/robertmwilk" target="_blank" rel="noreferrer" id="linkedin">
                     <app-svg-icon class="icon" [path]="linkedin"></app-svg-icon>
                 </a>
-            </li>
-            <li class="social">
-                <a href="https://github.com/Robert-Wilk" target="_blank" rel="noreferrer">
+                <a href="https://github.com/Robert-Wilk" target="_blank" rel="noreferrer" id="github">
                     <app-svg-icon class="icon" [path]="github"></app-svg-icon>
                 </a>
-            </li>
-            <li class="social">
-                <a href="https://twitter.com/robert_wilk_" target="_blank" rel="noreferrer">
+                <a href="https://twitter.com/robert_wilk_" target="_blank" rel="noreferrer" id="twitter">
                     <app-svg-icon class="icon" [path]="twitter"></app-svg-icon>
                 </a>
-            </li>
-        </ul>
-    </div>
-    <div style="display: flex;">
-        <button class="btn-white" (click)="backToTop()">Back to Top</button>
+            </div>
+        </div>
     </div>
 </footer>

@@ -1,6 +1,5 @@
 .content {
     margin-top: 3rem;
-    min-height: calc(100vh - 90px - 293px);
     text-align: center;
 }
 h1 {
@@ -23,6 +22,7 @@ h1 {
 }
 a {
     text-decoration: none;
+    margin: auto;
 }
 @keyframes gradient {
 	0% {

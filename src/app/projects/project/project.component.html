@@ -8,8 +8,8 @@
                         <p>{{ project.desc }}</p>
                     </div>
                     <div class="button-group">
-                        <button (click)="back()" class="btn-main margin-right">Back to Portfolio</button>
-                        <a *ngIf="project.hasLink" href="{{ project.link }}" target="_blank" class="btn-outline">View Project</a>
+                        <a *ngIf="project.hasLink" href="{{ project.link }}" target="_blank" class="btn-main margin-right">View Project</a>
+                        <button (click)="back()" class="btn-outline ">Back to Portfolio</button>
                     </div>
                 </div>
                 <div class="right">

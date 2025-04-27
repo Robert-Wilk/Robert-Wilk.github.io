@@ -1,9 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { CarouselModule } from '@coreui/angular';
-import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
@@ -11,37 +8,36 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HeroComponent } from './hero/hero.component';
-import { AboutStudiesComponent } from './about-studies/about-studies.component';
-import { HomeComponent } from './home/home.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { SkillsComponent } from './skills/skills.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
+export function removeLoadingScreen() {
+  return () => {
+    const loader = document.getElementById('loading-overlay');
+    if (loader) {
+      loader.style.transition = 'opacity 0.5s';
+      loader.style.opacity = '0';
+      setTimeout(() => loader.remove(), 1000); // Wait for fade-out
+    }
+  };
+}
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroComponent,
-    AboutStudiesComponent,
-    HomeComponent,
-    CarouselComponent,
-    SkillsComponent,
-    AboutComponent,
-    ContactComponent,
+    AppComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    IconModule,
-    CarouselModule,
-    HttpClientModule,
     ReactiveFormsModule,
     SharedModule
   ],
-  providers: [IconSetService],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: removeLoadingScreen,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

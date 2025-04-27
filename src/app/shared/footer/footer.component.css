@@ -1,62 +1,84 @@
 footer {
-    background-color: var(--red-light);
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    background: linear-gradient(to right, var(--gray-1), var(--gray-2));
+    /*background: linear-gradient(to right, var(--red-light), var(--purple-light));*/
     color: var(--white);
+    padding: 2rem;
 }
-.footer-container {
+.container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: start;
+    gap: 4rem;
+    align-items: start;
+    background-color: white;
+    border-radius: 10px;
 }
-.logo-and-text {
+.footer-header {
+    font-weight: bold;
+    margin-bottom: 0rem;
+}
+.site-info {
+    padding: 1rem;
+    margin: auto auto auto 0;
+}
+.footer-list {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
 }
-.logo {
-    margin-bottom: 1rem;
-    margin-right: 0.5rem;
-    text-decoration: none;
-    /* line-height: 1; */
+.footer-list a {
+    color: black;
+    text-decoration: underline;
+    width: min-content;
+    padding: 5px;
+    border-radius: 5px;
 }
-.logo img {
-    height: 5rem;
-    width: auto;
+.footer-list a:hover {
+    background-color: var(--red-light);
+    color: white;
 }
 .socials {
     display: flex;
-    justify-content: flex-end;
-    padding-left: 0;
-    list-style: none;
+    gap: 1rem;
+    justify-content: start;
+}
+.socials a:hover{
+    background-color: white;
 }
 .icon {
     height: 2rem !important;
     width: 2rem !important;
-    background-color: white;
-    transition: 200ms ease-in-out;
+    background-color: black;
 }
-.icon:hover {
-    height: 2.2rem !important;
-    width: 2.2rem !important;
+.logo {
+    font-weight: bold;
+    background: -webkit-linear-gradient(0deg, var(--red-light), var(--purple-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: poppins;
+    font-size: 1.3rem;
 }
-
-li:nth-of-type(n) {
-    margin-right: 10px;
+.dog {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
-li:last-of-type {
-    margin-right: 0px;
+.dog:hover {
+    color: black;
+    text-decoration: underline;
 }
-
-/* TEMPORARY */
-button {
-    text-align: center;
-    margin: auto;
+#github .icon:hover {
+    background-color: #c9510c !important;
+}
+#linkedin .icon:hover {
+    background-color: #0a66c2 !important;
+}
+#twitter .icon:hover {
+    background-color: #1da1f2 !important;
 }
 @media only screen and (max-width: 768px) {
-    .logo {
-        display: none !important;
-    }
     .footer-container {
         flex-wrap: nowrap;
         flex-direction: column;

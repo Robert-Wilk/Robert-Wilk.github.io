@@ -1,0 +1,17 @@
+<div class="container hero-section">
+    <div class="left">
+        <p class="time">Based in North Carolina &RightArrow; {{ currentTime | date: 'hh:mm:ss aa' }}</p>
+        <hr>
+        <h1>This is <span>Robert Wilk</span>,</h1>
+        <p class="flavor-text">he {{funFact}}.</p>
+        <div class="description">
+            <p class="subtitle">Most importantly, he's a passionate full-stack developer who loves exploring the world of tech.</p>
+            <p>Currently &RightArrow; <b>Software Engineer &commat; Wells Fargo</b></p>
+            <p>Previously &RightArrow; <b>Student &commat; University of North Carolina at Charlotte</b></p>
+        </div>
+        <a role="button" class="link" [routerLink]="['/about']">Read More</a>
+    </div>
+    <!--<div class="right">
+        <img src="./../../assets/media/mewithsnow.jpg" alt="picture of Robert Wilk">
+    </div>-->
+</div>

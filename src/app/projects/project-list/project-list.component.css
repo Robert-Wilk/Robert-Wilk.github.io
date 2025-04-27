@@ -67,17 +67,21 @@ a {
     background: var(--black);
     width: 1.8rem !important;
     height: 1.8rem !important;
-    margin-left: 1rem;
+    margin-left: auto;
     display: block;
 }
 .icon-button {
     transition: 200ms;
     width: 56px !important;
     height: 56px !important;
+    cursor: pointer;
 }
 .icon-button:hover {
-    width: 2.6rem !important;
-    height: 2.6rem !important;
+    background-color: #4b4b4b; /* Darker shade of black */
+}
+.icon-button:active {
+    background-color: #000; /* Same black but can add darker shade if desired */
+    transform: scale(0.98); /* Slightly shrink the button for a "pressed" effect */
 }
 .clear-btn {
     margin-left: 1rem;
@@ -94,9 +98,6 @@ a {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 500ms;
-}
-.link:hover {
-    font-size: 110%;
 }
 .project-display-grid {
     display: grid;
@@ -144,7 +145,7 @@ a {
     position: absolute;
     top: -4px; bottom: -4px;
     left: -4px; right: -4px;
-    background: -webkit-linear-gradient(0deg, var(--red-light), var(--purple-light));
+    background: -webkit-linear-gradient(0deg, var(--gray-1), var(--gray-2));
     content: '';
     z-index: -1;
     border-radius: 12px;

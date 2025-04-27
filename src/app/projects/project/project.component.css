@@ -26,6 +26,8 @@
     margin-right: 2rem;
     border: 4px solid var(--red-light);
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
 }
 h2 {
  margin-bottom: 0;    
@@ -40,39 +42,22 @@ img {
 .margin-right { 
     margin-right: 40px; 
 }
-
-@media only screen and (max-width: 576px) {
-    .btn-main, .btn-outline {
-        width: 80%;
-        margin: auto !important;
-    }
-
-}
-
-@media only screen and (max-width: 768px) and (min-width: 576) {
-    .btn-main, .btn-outline {
-        width: 60%;
-        margin: auto !important;
-    }
-
-}
-
-@media only screen and (max-width: 992px) and (min-width: 768px) {
-    .btn-main, .btn-outline {
-        width: 40%;
-        margin: auto !important;
-    }
+.button-group {
+    margin-top: auto;
 }
 
 @media only screen and (max-width: 992px) {
-    .btn-main {
-        margin-bottom: 1rem !important;
-        margin-right: 0;
-    }
     .button-group {
         display: flex;
         flex-direction: column;
         margin: auto;
+        align-items: center;
+    }
+    .btn-main {
+        margin: auto;
+    }
+    .btn-outline {
+        margin-top: 1rem;
     }
     .left, .right {
         flex: 0;
@@ -83,14 +68,5 @@ img {
     }
     .project-showcase {
         flex-direction: column;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .btn-main {
-        padding: 10px 20px;
-    }
-    .btn-outline {
-        padding: 13px 23px;
     }
 }

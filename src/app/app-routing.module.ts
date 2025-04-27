@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, TitleStrategy } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './shared/error/error.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { RoutingTitleStrategy } from './shared/routing-title-strategy';
 
 const routes: Routes = [
   {
     path: 'home',
     title: 'Home',
-    component: HomeComponent,
+    data: { preload: true },
+    loadChildren: () =>
+      import('./home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'about',
     title: 'About',
-    component: AboutComponent,
+    data: { preload: false },
+    loadChildren: () =>
+      import('./about/about.module').then(m => m.AboutModule)
   },
   {
     path: 'projects',
@@ -30,7 +31,23 @@ const routes: Routes = [
   {
     path: 'contact',
     title: 'Contact',
-    component: ContactComponent,
+    data: { preload: false },
+    loadChildren: () =>
+      import('./contact/contact.module').then(m => m.ContactModule)
+  },
+  {
+    path: 'email',
+    title: 'Email',
+    data: { preload: false },
+    loadChildren: () =>
+      import('./email/email.module').then(m => m.EmailModule)
+  },
+  {
+    path: 'doggo',
+    title: 'Kane the German Shepard',
+    data: { preload: false },
+    loadChildren: () =>
+      import('./doggo/doggo.module').then(m => m.DoggoModule)
   },
   {
     path: '',

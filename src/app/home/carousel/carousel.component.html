@@ -1,0 +1,15 @@
+<div 
+  class="carousel-container" 
+  (mouseenter)="pauseCarousel()" 
+  (mouseleave)="resumeCarousel()">
+  <div 
+    class="carousel-wrapper" 
+    [style.transform]="'translateX(' + translateX + 'px)'">
+    <div class="carousel-item" *ngFor="let image of visibleImages">
+      <img [src]="image" alt="carousel image" />
+    </div>
+  </div>
+  <button class="pause-btn" (click)="togglePause()">
+    {{ isPaused ? 'Play' : 'Pause' }}
+  </button>
+</div>

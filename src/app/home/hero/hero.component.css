@@ -1,35 +1,48 @@
 .hero-section {
-    display: flex;
-    margin-top: 3rem;
-    justify-content: space-between;
+    height: 100vh;
 }
-h2 {
-    font-family: oswald;
-    font-weight: bold;
+h1 {
+    font-family: poppins;
     font-size: 6rem;
     margin-top: 2.5rem;
-    margin-bottom: 3rem;
-    text-transform: uppercase;
 
+}
+h1 span {
+    font-family: poppins;
     width:fit-content;
     background: -webkit-linear-gradient(0deg, var(--red-light), var(--purple-light));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-a {
-    text-decoration: none;
+p, a {
+    font-size: 1.1rem;
 }
-.margin-right { 
-    margin-right: 40px; 
-}
-.right {
-    padding-left: 1rem;
-    display: flex;
-    align-items: center;
+.left {
+    margin: 10% 0 auto 0;
 }
 .flavor-text {
-    margin-bottom: 4rem;
+    margin: 0 0 4rem 0;
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+.description {
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+.time {
+    font-weight: bold;
+    padding-left: 1rem;
+}
+.link {
+    margin-left: calc(1rem - 5px);
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.link:hover {
+    background-color: var(--red-light);
+    color: white;
 }
 img {
     width: 540px;
@@ -52,27 +65,12 @@ img {
     .hero-section {
         flex-direction: column;
     }
-    .flavor-text, h2 {
-        margin-bottom: 2rem;
-    }
-    h2 {
-        margin-top: 0rem;
-    }
-    p {
-        margin-bottom: 0;
-    }
-    .left {
-        margin-bottom: 2rem;
-    }
     .right {
         padding-left: 0;
     }
 }
 
 @media only screen and (max-width: 425px) {
-    h2 {
-        font-size: 4rem;
-    }
     .hero-btn-group {
         display: flex;
         flex-direction: column;
@@ -83,7 +81,4 @@ img {
     a:first-of-type {
         margin-bottom: 1rem;
     }
-    .margin-right {
-        margin-right: auto;
-    };
 }

@@ -1,6 +1,5 @@
 .content {
     margin-top: 3rem;
-    min-height: calc(100vh - 90px - 293px);
 }
 .about-section {
     display: flex;
@@ -35,7 +34,7 @@
 }
 .icon-mini {
     display: block;
-    background-color: var(--red-light);
+    background-color: var(--black);
     width: 1.4rem !important;
     height: 1.4rem !important;
     margin-right: .5rem;
@@ -79,7 +78,7 @@ a {
     margin: 0;
 }
 .resume-content {
-    border: 4px solid var(--red-light);
+    border: 4px solid var(--gray-1);
     border-radius: 12px;
     padding: 1rem;
     margin: 2rem 0;
@@ -88,6 +87,9 @@ h3 {
     font-size: 1.3rem;
     margin-bottom: 0;
     color: var(--black);
+}
+.bold {
+    font-weight: bold;
 }
 /* resume icon */
 .icon {
