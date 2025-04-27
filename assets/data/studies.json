@@ -1,17 +1,40 @@
 [
-    "../../assets/media/angular-logo.png",
-    "../../assets/media/azure-logo.png",
-    "../../assets/media/cpp-logo.png",
-
     "../../assets/media/html-logo.png",
-    "../../assets/media/css-logo.png",
-    "../../assets/media/net-logo.svg",
-    
-    "../../assets/media/matlab-logo.png",
+    "../../assets/media/js-logo.png",
+    "../../assets/media/typescript-logo.png",
     "../../assets/media/react-logo.png",
-    "../../assets/media/postgres-logo.png",
+    "../../assets/media/angular-logo.png",
+
+    "../../assets/media/css-logo.png",
+    "../../assets/media/sass-logo.png",
+    "../../assets/media/bootstrap-logo.png",
+    "../../assets/media/styledcomponents-logo.png",
+
+    "../../assets/media/csharp-logo.png",
+    "../../assets/media/net-logo.svg",
+    "../../assets/media/java-logo.png",
+    "../../assets/media/springboot-logo.png",
+    "../../assets/media/flask-logo.png",
+    "../../assets/media/mssql-logo.png",
 
     "../../assets/media/python-logo.png",
-    "../../assets/media/ros-logo.jpg",
-    "../../assets/media/typescript-logo.png"
+    "../../assets/media/jupyter-logo.png",
+    "../../assets/media/pandas-logo.png",
+    "../../assets/media/matplotlib-logo.png",
+    "../../assets/media/sklearn-logo.png",
+    "../../assets/media/opencv-logo.png",
+    "../../assets/media/selenium-logo.png",
+
+    "../../assets/media/git-logo.png",
+    "../../assets/media/jenkins-logo.png",
+    "../../assets/media/ucd-logo.png",
+    "../../assets/media/harness-logo.png",
+    "../../assets/media/azure-logo.png",
+    "../../assets/media/appd-logo.png",
+    "../../assets/media/elastic-logo.png",
+    "../../assets/media/splunk-logo.png",
+
+    "../../assets/media/cpp-logo.png",
+    "../../assets/media/matlab-logo.png",
+    "../../assets/media/ros-logo.jpg"
 ]
