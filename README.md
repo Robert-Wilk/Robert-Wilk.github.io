@@ -1,7 +1,7 @@
 # robert-wilk.github.io
 My personal portfolio website created in Angular
 ======
-Started learning React around November 2021. For a class project, we had to make a portfolio website. I decided to use the opportunity to use what I know of React to make my website. Eventually, I rewrote it in Angular
+Started learning React around November 2021. For a class project, we had to make a portfolio website. I decided to use the opportunity to use what I know of React to make my website. Eventually, I rewrote it in Angular...
 ------
 Current Version: v1.1
 - Changed font sizes of paragraphs to be more uniform
