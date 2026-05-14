@@ -1,0 +1,49 @@
+@if (project(); as p) {
+
+<div class="topbar">
+  <a class="topbar-back" (click)="back()">← Back to Projects</a>
+  <span class="topbar-crumb">Projects / <span>{{ p.name }}</span></span>
+</div>
+
+<div class="grid">
+
+  <div class="header-area">
+    <div class="big-num">{{ padId() }}</div>
+    <div class="title-block">
+      <span class="tag">{{ category() }}</span>
+      <h1 class="title">{{ p.name }}</h1>
+      <p class="date">{{ p.date }}</p>
+    </div>
+    @if (p.hasLink) {
+    <div class="actions-top">
+      <a [href]="p.link" target="_blank" class="btn-main">View Project</a>
+    </div>
+    }
+  </div>
+
+  <div class="image-area">
+    <img [src]="p.img" [alt]="p.name" />
+    <p class="image-caption">{{ p.flavorText }}</p>
+  </div>
+
+  <div class="content-area">
+    <div class="section-label">About this project</div>
+    <p class="desc">{{ p.desc }}</p>
+
+    <dl class="meta-grid">
+      <div class="meta-item">
+        <dt>Timeline</dt>
+        <dd>{{ p.date }}</dd>
+      </div>
+      <div class="meta-item">
+        <dt>Category</dt>
+        <dd>{{ category() }}</dd>
+      </div>
+    </dl>
+  </div>
+
+</div>
+
+} @else {
+    <p class="not-found">Project not found.</p>
+}
