@@ -1,0 +1,293 @@
+.container {
+    position: relative;
+    min-height: 100vh;
+    background: #FAF9F6;
+    padding: 10vh 5vw 15vh;
+    overflow: visible;
+}
+/* section title css */
+.title {
+    text-align: center;
+}
+.title p:first-of-type {
+    margin-top: 1rem;
+}
+/* introduction section */
+.introduction-section {
+    display: flex;
+    margin: 3rem auto;
+    justify-content: center;
+    gap: 3rem;
+}
+.introduction-section img {
+    width: 100%;
+    height: 100%;
+    object-position: 10% top;
+    overflow: hidden;
+    object-fit: cover;
+}
+img {
+    border-radius: 10px;
+}
+.side-img, .side-img2 {
+    align-self: center;
+    margin: auto;
+}
+.side-img, .side-img2 {
+    height: auto;
+    width: 100%;
+}
+.left {
+    padding: 2rem;
+    border: 4px solid var(--red-light);
+    border-radius: 12px;
+    width: 50%
+}
+.left p {
+    margin: 0;
+}
+/* data-glance section */
+.data-glance-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.data-glance-section h2 {
+    margin-bottom: 3rem;
+}
+.code-snippet {
+    margin-bottom: 3rem;
+}
+.head-img {
+    width: 40%;
+}
+.snippet-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem auto 0 auto;
+}
+.snippet {
+    display: flex;
+    flex-direction: column;
+}
+.snippet span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+/* data cleaning section */
+.data-cleaning-section {
+    margin: 0 auto 3rem auto;
+    width: 75%;
+}
+.data-cleaning-section .left {
+    border: 0;
+    padding: 0;
+}
+.data-cleaning-wrapper {
+    display: flex;
+    gap: 3rem;
+}
+.data-cleaning-wrapper:last-of-type {
+    margin-top: 3rem;
+}
+.data-cleaning-ex {
+    margin-top: 1rem;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+/* visualization section */
+.visualization-section, .visualization-section2 {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.visualization-section h2 {
+    text-align: center;
+}
+.visualization-section p:first-of-type {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+.viz-inbtwn-p{
+    text-align: center;
+    width: 75%;
+    margin: auto;
+}
+.graph-img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.graph-img-start {
+    margin-top: 2rem;
+}
+/* ratio section */
+.ratio-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+.ratio-section h2 {
+    text-align: center;
+}
+.ratio-section p:first-of-type {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.ratio-section img {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+/* conclusion-section */
+.conclusion-section {
+    margin-bottom: 3rem;
+    width: 75%;
+    margin: auto;
+}
+.conclusion-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.conclusion-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;;
+}
+
+.ref-link, a {
+  text-decoration: none;
+  background: linear-gradient(to right, var(--red-light), var(--purple-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  align-self: flex-start;
+  color: black;
+  font-family: "Stack Sans Notch", sans-serif;
+}
+.ref-link {
+    margin-bottom: .5rem;
+    display: inline-flex;
+    align-items: center;
+}
+.ref-link::after, a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--red-light), var(--purple-light));
+  transition: width 0.4s ease;
+}
+
+.ref-link:hover, a:hover {
+  color: transparent;
+}
+
+.ref-link:hover::after, a:hover::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .data-cleaning-section, .ratio-section, .conclusion-section {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .data-cleaning-wrapper, .ratio-section {
+        flex-direction: column;
+    }
+    .data-cleaning-wrapper:last-of-type {
+        flex-direction: column-reverse;
+    }
+    .side-img, .side-img2{
+        margin: auto;
+    }
+    .left {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .data-cleaning-section, .ratio-section, .conclusion-section {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .right .gh-logo {
+        height: auto;
+        width: 40%;
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+    }
+    .head-img {
+        width: 60%;
+    }
+    .snippet img {
+        width: 50%;
+        height: auto;
+    }
+    .snippet {
+        align-items: center;
+    }
+    .data-cleaning-section, .ratio-section, .conclusion-section {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .snippet-showcase, .data-cleaning-wrapper, .ratio-section { 
+        flex-direction: column;
+    }
+    .snippet:nth-child(2) {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .data-cleaning-wrapper:last-of-type {
+        flex-direction: column-reverse;
+    }
+    .data-cleaning-m-0 {
+        margin-bottom: 0;
+    }
+    .data-cleaning-section h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .left {
+        margin-right: 0;
+        width: 100%;
+    }
+    .ratio-section div:last-of-type {
+        margin-top: 3rem;
+    }
+    .reverse {
+        flex-direction: row;
+    }
+    .ratio-section img  {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .introduction-section {
+        flex-direction: column;
+    }
+    .introduction-section .left {
+        margin-right: 0;
+    }
+    .introduction-section .right {
+        margin: auto;
+        margin-top: 3rem;
+    }
+    .side-img, .side-img2 {
+        padding: 0;
+    }
+}

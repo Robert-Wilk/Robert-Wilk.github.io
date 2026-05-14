@@ -1,0 +1,24 @@
+<div class="hero-wrapper">
+
+  <!-- ── C: Theatrical Centered ───────────────────────── -->
+  <div class="hero-sample hero-c">
+<div class="hero-c-ghost" aria-hidden="true">RW</div>
+    <div class="hero-c-center">
+      <span class="hero-eyebrow">Hello, I'm</span>
+      <h1 class="hero-name">Robert <span>Wilk.</span></h1>
+      <p class="hero-fact" [class.hidden]="!isVisible()">He {{ funFact() }}.</p>
+      <p class="hero-tagline">Most importantly, he's a passionate full-stack developer who loves exploring the world of tech.</p>
+    </div>
+    <div class="hero-c-bottom">
+      <div class="hero-roles">
+        <p class="hero-role"><span class="role-label">Currently &rarr;</span> Software Engineer &commat; Wells Fargo</p>
+        <p class="hero-role"><span class="role-label">Previously &rarr;</span> Student &commat; UNC Charlotte</p>
+      </div>
+      <div class="scroll-hint" aria-label="Scroll down">
+        <span class="scroll-arrow">&darr;</span>
+      </div>
+      <a class="hero-cta" [routerLink]="['/about']">About me <span class="cta-arrow">&rarr;</span></a>
+    </div>
+  </div>
+
+</div>

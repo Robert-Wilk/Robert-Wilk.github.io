@@ -1,0 +1,104 @@
+<div class="projects-wrapper">
+
+    <!-- ── Shared header ─────────────────────────────────── -->
+    <header class="projects-header">
+        <div class="projects-title-row">
+            <div class="projects-title-group">
+                <h1 class="projects-title">Projects</h1>
+                <span class="projects-count">Total: {{ filteredByCategory().length }}</span>
+            </div>
+            <div class="view-toggle" role="group" aria-label="View mode">
+                <button class="view-toggle-btn" [class.active]="viewMode() === 'list'"
+                    (click)="viewMode.set('list')" aria-label="List view">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <rect x="0" y="2" width="16" height="2" rx="1" fill="currentColor"/>
+                        <rect x="0" y="7" width="16" height="2" rx="1" fill="currentColor"/>
+                        <rect x="0" y="12" width="16" height="2" rx="1" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button class="view-toggle-btn" [class.active]="viewMode() === 'grid'"
+                    (click)="viewMode.set('grid')" aria-label="Grid view">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <rect x="0" y="0" width="7" height="7" rx="1" fill="currentColor"/>
+                        <rect x="9" y="0" width="7" height="7" rx="1" fill="currentColor"/>
+                        <rect x="0" y="9" width="7" height="7" rx="1" fill="currentColor"/>
+                        <rect x="9" y="9" width="7" height="7" rx="1" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="projects-search-bar">
+            <svg class="search-icon" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10.5 10.5L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <form [formGroup]="projectSearch">
+                <input type="text" formControlName="project"
+                    placeholder="Search projects…" (input)="searchHandler()" autocomplete="off" />
+            </form>
+            @if (projectSearch.value.project) {
+            <button class="search-clear" (click)="clearSearch()" aria-label="Clear search">✕</button>
+            }
+        </div>
+
+        <div class="filter-chips">
+            @for (cat of categories; track cat) {
+            <button class="filter-chip" [class.active]="activeCategory() === cat"
+                (click)="activeCategory.set(cat)">{{ cat }}</button>
+            }
+        </div>
+    </header>
+
+    <!-- ── List view ─────────────────────────────────────── -->
+    @if (viewMode() === 'list') {
+    <section class="mode-list">
+        <div class="index-list">
+            @for (project of filteredByCategory(); track project.id; let i = $index) {
+            <a [routerLink]="buildUrl(project)" class="index-row" (click)="popRow($event)">
+                <span class="index-num">{{ padIndex(i) }}</span>
+                <span class="index-title">{{ project.title }}</span>
+                <span class="index-cat">{{ project.tag }}</span>
+                <span class="index-date">{{ project.date }}</span>
+                <span class="index-arrow">→</span>
+                <div class="index-preview">
+                    <img [src]="project.src" [alt]="project.title" />
+                </div>
+            </a>
+            <div class="index-rule"></div>
+            }
+        </div>
+        @if (filteredByCategory().length === 0) {
+        <p class="empty-state">No projects match — <a routerLink="/contact">get in touch</a> to build one.</p>
+        }
+    </section>
+    }
+
+    <!-- ── Grid view ─────────────────────────────────────── -->
+    @if (viewMode() === 'grid') {
+    <section class="mode-grid">
+        <div class="bento-grid">
+            @for (project of filteredByCategory(); track project.id; let i = $index) {
+            <a [routerLink]="buildUrl(project)" class="bento-card" [class.bento-card--wide]="isFeatured(i)"
+                (click)="popCard($event)">
+                <img [src]="project.src" [alt]="project.title" class="bento-img" />
+                <div class="bento-overlay"></div>
+                <span class="bento-num" aria-hidden="true">{{ padIndex(i) }}</span>
+                <div class="bento-info">
+                    <span class="bento-cat">{{ project.tag}}</span>
+                    <h3 class="bento-title">{{ project.title }}</h3>
+                </div>
+                <div class="bento-desc-reveal">
+                    <p class="bento-desc-text">{{ project.subtitle }}</p>
+                </div>
+                <div class="bento-ripple" aria-hidden="true"></div>
+            </a>
+            }
+        </div>
+        @if (filteredByCategory().length === 0) {
+        <p class="empty-state">No projects match — <a routerLink="/contact">get in touch</a> to build one.</p>
+        }
+    </section>
+    }
+
+</div>

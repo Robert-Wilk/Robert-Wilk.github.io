@@ -1,0 +1,289 @@
+.preview-wrapper {
+  margin: 0;
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  height: auto;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #FAF9F6;
+}
+.row,
+.section,
+section {
+  position: relative;
+  overflow: hidden;
+}
+.section,
+section {
+  text-align: center;
+}
+#smooth-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.horiz-gallery-strip,
+.horiz-gallery-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+/* ── Project cards ─────────────────────────────────── */
+.project-wrap {
+  width: 33vw;
+  padding: 2rem;
+  box-sizing: content-box;
+  height: 100px;
+  position: relative;
+  opacity: 0;
+}
+
+.card-number {
+  position: absolute;
+  top: 0.5rem;
+  left: 2.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  opacity: 0.35;
+  font-weight: 600;
+}
+
+.card-tag {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.3;
+  white-space: nowrap;
+}
+
+/* ── Image wrap + overlay ──────────────────────────── */
+.card-img-wrap {
+  position: relative;
+  width: 65%;
+  display: inline-block;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+
+.project-wrap h3 {
+  transition: all 0.3s ease;
+  opacity: 0;
+  color: #000;
+  margin-top: 0.75rem;
+}
+.project-wrap:hover h3 {
+  opacity: 1;
+}
+
+.project-wrap.focused .project-blurb {
+  opacity: 1;
+}
+
+.project-wrap.focused h3 {
+  opacity: 1;
+}
+
+.project-blurb {
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+}
+
+/* ── Option B: corner badge ────────────────────────── */
+.card-badge {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.25s ease, color 0.25s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.project-wrap.focused .card-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-badge:hover {
+  background: linear-gradient(to right, var(--red-light), var(--purple-light));
+  color: #fff;
+}
+
+/* ── Gallery wrapper + UI ──────────────────────────── */
+.horiz-gallery-wrapper {
+  height: 100svh;
+  display: flex;
+  padding-top: 15vh;
+}
+
+.gallery-ui {
+  position: absolute;
+  bottom: 8vh;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 10;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-ui.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery-progress-bar {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-progress-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--red-light), var(--purple-light));
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.gallery-counter {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  opacity: 0.45;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Section ghost header ──────────────────────────── */
+.section-ghost-header {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 3vh;
+  font-family: "Stack Sans Notch", sans-serif;
+  font-size: clamp(7rem, 22vw, 28rem);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── View more ─────────────────────────────────────── */
+.view-more {
+  position: relative;
+  width: 100%;
+  padding: 6vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 20vh;
+  margin-bottom: 40vh;
+}
+
+.view-more .ghost-word {
+  font-family: "Stack Sans Notch", sans-serif;
+  font-size: clamp(7rem, 20vw, 24rem);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  transition: -webkit-text-stroke 0.4s ease;
+}
+
+.view-more:hover .ghost-word {
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.22);
+}
+
+.view-more a {
+  position: absolute;
+  font-family: "Stack Sans Notch", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: 300;
+  color: transparent;
+  background: linear-gradient(to right, var(--red-light), var(--purple-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding-bottom: 8px;
+}
+
+.view-more a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--red-light), var(--purple-light));
+  transition: width 0.5s ease;
+}
+
+.view-more a:hover::after {
+  width: 100%;
+}
+
+.view-more .arrow {
+  color: var(--purple-light);
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.view-more a:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+}

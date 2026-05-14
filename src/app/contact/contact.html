@@ -1,0 +1,51 @@
+<div class="contact-wrapper">
+    <section class="ct-d">
+
+        <!-- Top: eyebrow left, timezone right -->
+        <div class="ct-d-top">
+            <span class="ct-d-eyebrow">Get in touch</span>
+            <div class="ct-d-tz-bar">
+                <div class="ct-d-tz-block">
+                    <span class="ct-d-tz-label">TIMEZONE</span>
+                    <div class="ct-d-tz-row">
+                        <span class="ct-d-tz-name">US — Eastern</span>
+                        <span class="ct-d-clock">{{ currentTime() }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two-column: statement left, email right -->
+        <div class="ct-d-lr">
+            <div class="ct-d-statement">
+                <span class="ct-d-ghost" aria-hidden="true">HELLO</span>
+                <h1 class="ct-d-heading">The best projects<br>start with a <em class="ct-d-em">conversation.</em></h1>
+            </div>
+            <div class="ct-d-right">
+                <span class="ct-d-right-ghost" aria-hidden="true">@</span>
+                <div class="ct-d-email-block">
+                    <span class="ct-d-email-label">reach me at</span>
+                    <a class="ct-d-email" [href]="'mailto:' + email">{{ email }}</a>
+                    <button class="ct-d-email-copy" (click)="copyEmail()">
+                        @if (copied()) { ✓ Copied to clipboard } @else { Copy address → }
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ticker -->
+        <div class="ct-d-ticker-wrap" aria-hidden="true">
+            <div class="ct-d-ticker-track">
+                @for (n of [1,2,3,4]; track n) {
+                <span class="ct-d-ticker-item">{{ email }}</span>
+                <span class="ct-d-ticker-sep">✦</span>
+                <span class="ct-d-ticker-item">say hello</span>
+                <span class="ct-d-ticker-sep">✦</span>
+                <span class="ct-d-ticker-item">let's build something</span>
+                <span class="ct-d-ticker-sep">✦</span>
+                }
+            </div>
+        </div>
+
+    </section>
+</div>

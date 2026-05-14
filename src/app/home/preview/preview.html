@@ -1,0 +1,41 @@
+<div class="preview-wrapper">
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <section id="portfolio">
+                <div class="section-ghost-header" aria-hidden="true">Projects</div>
+                <div class="container-fluid">
+                    <div class="horiz-gallery-wrapper">
+                        <div class="gallery-ui">
+                            <div class="gallery-progress-bar">
+                                <div class="gallery-progress-fill"></div>
+                            </div>
+                            <span class="gallery-counter">01 / 08</span>
+                        </div>
+                        <div class="horiz-gallery-strip">
+                            @for (project of projects; track project.id) {
+                                <div class="project-wrap">
+                                    <span class="card-number">{{project.id < 10 ? '0' + project.id : project.id}}</span>
+                                    <span class="card-tag">{{project.tag}}</span>
+                                    <div class="card-img-wrap">
+                                        <img [src]="project.img" [alt]="project.name" />
+                                        <div class="card-overlay"></div>
+                                        <a [routerLink]="['/projects', project.id]" class="card-badge">↗</a>
+                                    </div>
+                                    <h3>{{project.name}}</h3>
+                                    <p class="project-blurb">{{project.desc}}</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more">
+                  <div class="ghost-word" aria-hidden="true">View more?</div>
+                  <a routerLink="projects">View all projects <span class="arrow">&rarr;</span></a>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Backdrop for dimming background -->
+<div id="modal-backdrop" class="modal-backdrop"></div>
