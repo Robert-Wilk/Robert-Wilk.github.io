@@ -1,0 +1,120 @@
+header {
+    font-family: "Roboto", sans-serif;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    margin-top: .5rem;
+}
+header a {
+    color: #fff;
+}
+header a:hover {
+    text-decoration: underline;
+    transition: var(--transition-delay) ease-in-out;
+}
+.header-wrapper {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: .75rem 1rem;
+    background-color: rgba(94, 94, 94, 0.719);
+    border-radius: 20px;
+}
+.logo-hamburger-wrapper {
+    display: flex;
+    align-items: center;
+}
+.hamburger-icon {
+    background-color: transparent;
+    border: 0;
+    padding-top: 2px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger-icon svg {
+    color: #fff;
+}
+.nav-action-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Fill remaining space */
+    justify-content: space-between; /* Space nav and action buttons */
+}
+nav {
+    margin-left: 2rem;
+    margin-right: auto;
+}
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+}
+.nav-item {
+    text-decoration: none;
+    list-style-type: none;
+}
+.action-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+    margin-right: 0;
+}
+.action-button {
+    padding-top: 5px;
+}
+.resume-icon:hover, .linkedin-icon:hover, .github-icon:hover {
+    transition: var(--transition-delay) ease-in-out;
+    transform: scale(1.1);
+}
+.resume-icon:hover {
+    color: rgb(113, 255, 47);
+}
+.linkedin-icon:hover {
+    color: rgb(47, 179, 255);
+}
+.github-icon:hover {
+    color: #f39428;
+}
+
+@media (max-width: 510px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+    .logo-hamburger-wrapper {
+        width: 100%;
+        margin-bottom: auto;
+    }
+    .hamburger-icon {
+        display: flex !important;
+        margin-left: auto;
+    }
+    .nav-action-wrapper {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden; 
+    }
+    nav {
+        margin-top: 1rem;
+        margin-left: 0;
+        padding: 0;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: start;
+    }
+    .action-wrapper {
+        align-items: start;
+        margin-left: 0;
+        margin-top: 1rem;
+        justify-content: start;
+    }
+}

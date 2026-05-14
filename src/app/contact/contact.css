@@ -1,0 +1,280 @@
+/* ── Wrapper ───────────────────────────────────────── */
+.contact-wrapper {
+    position: relative;
+    height: 100vh;
+    background: #FAF9F6;
+    padding: 10vh 5vw 0 5vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ════════════════════════════════════════════════════
+   CONTACT — Ticker Tape
+   ════════════════════════════════════════════════════ */
+.ct-d {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* ── Top bar: eyebrow + timezone ─────────────────── */
+.ct-d-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ct-d-eyebrow {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.3);
+}
+
+.ct-d-tz-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.78rem;
+    color: rgba(0,0,0,0.35);
+    font-variant-numeric: tabular-nums;
+}
+
+.ct-d-tz-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ct-d-tz-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.3);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.ct-d-tz-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+.ct-d-tz-name {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: #000;
+}
+
+.ct-d-clock {
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-variant-numeric: tabular-nums;
+    color: rgba(0,0,0,0.35);
+    letter-spacing: 0.04em;
+}
+
+/* ── Two-column: statement left, email right ──────── */
+.ct-d-lr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: center;
+    margin-top: auto;
+}
+
+.ct-d-statement {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.ct-d-ghost {
+    position: absolute;
+    top: 50%;
+    left: -2vw;
+    transform: translateY(-55%);
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: clamp(8rem, 22vw, 20rem);
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.04);
+    white-space: nowrap;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.ct-d-heading {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #000;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.ct-d-em {
+    font-style: normal;
+    color: transparent;
+    background: linear-gradient(to right, var(--red-light), var(--purple-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.ct-d-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    min-height: 300px;
+}
+
+.ct-d-right-ghost {
+    position: absolute;
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: clamp(12rem, 30vw, 28rem);
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.05);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+    top: 50%;
+    right: -20%;
+    transform: translate(-50%, -50%);
+}
+
+.ct-d-email-block {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.ct-d-email-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.3);
+}
+
+.ct-d-email {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+.ct-d-email::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--red-light), var(--purple-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.ct-d-email:hover {
+    color: transparent;
+    background: linear-gradient(to right, var(--red-light), var(--purple-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.ct-d-email:hover::after {
+    transform: scaleX(1);
+}
+
+.ct-d-email-copy {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: rgba(0,0,0,0.35);
+    transition: color 0.2s ease;
+}
+
+.ct-d-email-copy:hover {
+    color: transparent;
+    background: linear-gradient(to right, var(--red-light), var(--purple-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* ── Ticker ────────────────────────────────────────── */
+.ct-d-ticker-wrap {
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 0.75rem 0;
+    white-space: nowrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;;
+}
+
+.ct-d-ticker-track {
+    display: inline-flex;
+    gap: 0;
+    animation: ticker-scroll 30s linear infinite;
+    will-change: transform;
+}
+
+@keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.ct-d-ticker-item {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(to right, var(--red-light), var(--purple-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 0 1.5rem;
+    letter-spacing: 0.04em;
+}
+
+.ct-d-ticker-sep {
+    font-size: 0.7rem;
+    color: rgba(0,0,0,0.2);
+    align-self: center;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 800px) {
+    .ct-d-lr {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .ct-d-right-ghost {
+        display: none;
+    }
+}

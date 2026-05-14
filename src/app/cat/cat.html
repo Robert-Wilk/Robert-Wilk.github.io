@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="content">
+      <h1>Crow the Cat</h1>
+        <div class="collage-container">
+            <div class="collage-item" 
+                 *ngFor="let photo of photos" 
+                 [ngClass]="{
+                   'wide': photo.size === 'wide',
+                   'tall': photo.size === 'tall',
+                   'large': photo.size === 'large'
+                 }">
+              <img [src]="photo.url" [alt]="photo.description">
+            </div>
+          </div>
+    </div>
+</div>

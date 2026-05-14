@@ -1,0 +1,130 @@
+.footer-content a {
+    color: #fff;
+    font-size: clamp(1.25rem, 1.75vw, 2.5rem);
+    font-weight: lighter;
+    line-height: 1.25;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 75svh;
+    background-color: var(--base-400);
+    color: #fff;
+    overflow: hidden;
+    h2 {
+        font-weight: bold;
+        span {
+            background: -webkit-linear-gradient(0deg, var(--red-light), var(--purple-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.footer-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FAF9F6;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.footer-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.footer-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-row:nth-child(1) .footer-col:nth-child(1) {
+    flex: 3;
+}
+
+.footer-row:nth-child(1) .footer-col:nth-child(2) {
+    flex: 2;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-sub-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.footer-sub-col a {
+    transition: opacity var(--transition-delay) ease-in-out;
+}
+.footer-sub-col a:hover {
+    text-decoration: underline;
+}
+
+.footer-row h2 {
+    width: 75%;
+}
+
+.cursor-blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.349),
+    rgba(255,255,255,0)
+  );
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+.secret {
+    opacity: 0;
+}
+.secret:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1000px) {
+    .footer-row:nth-child(1) {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .footer-row h2 {
+        width: 100%;
+    }
+}
