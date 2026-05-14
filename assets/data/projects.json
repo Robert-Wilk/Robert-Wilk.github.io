@@ -12,7 +12,8 @@
       "link": "https://github.com/Robert-Wilk/Robert-Wilk.github.io",
       "isVisualization": false,
       "visualizationIndex": null,
-      "isDark": false
+      "isDark": false,
+      "tag": "Web"
     },  
     {
         "id": 1,
@@ -27,7 +28,8 @@
         "link": "",
         "isVisualization": false,
         "visualizationIndex": null,
-        "isDark": false
+        "isDark": false,
+        "tag": "Robotics"
     },
     {
         "id": 2,
@@ -42,7 +44,8 @@
         "link": "",
         "isVisualization": false,
         "visualizationIndex": null,
-        "isDark": false
+        "isDark": false,
+        "tag": "Web"
     },
     {
         "id": 3,
@@ -57,7 +60,8 @@
         "link": "https://github.com/Robert-Wilk/Ghoul-Game",
         "isVisualization": false,
         "visualizationIndex": null,
-        "isDark": true
+        "isDark": true,
+        "tag": "Web"
     },
     {
         "id": 4,
@@ -73,7 +77,8 @@
         "link": "",
         "isVisualization": false,
         "visualizationIndex": null,
-        "isDark": false
+        "isDark": false,
+        "tag": "AI & ML"
     },
     {
         "id": 5,
@@ -88,7 +93,8 @@
         "link": "",
         "isVisualization": true,
         "visualizationIndex": 0,
-        "isDark": false
+        "isDark": false,
+        "tag": "Visualization"
     },
     {
         "id": 6,
@@ -103,7 +109,8 @@
         "link": "",
         "isVisualization": true,
         "visualizationIndex": 1,
-        "isDark": false
+        "isDark": false,
+        "tag": "Visualization"
     },
     {
         "id": 7,
@@ -119,7 +126,8 @@
         "link": "",
         "isVisualization": true,
         "visualizationIndex": 2,
-        "isDark": false
+        "isDark": false,
+        "tag": "Visualization"
     },
     {
         "id": 8,
@@ -135,7 +143,8 @@
         "link": "",
         "isVisualization": true,
         "visualizationIndex": 3,
-        "isDark": true
+        "isDark": true,
+        "tag": "Visualization"
     },
     {
       "id": 9,
@@ -150,7 +159,8 @@
       "link": "https://github.com/Robert-Wilk/MEAN-bank-app",
       "isVisualization": false,
       "visualizationIndex": null,
-      "isDark": true
+      "isDark": true,
+      "tag": "Web"
     },
     {
       "id": 10,
@@ -165,7 +175,8 @@
       "link": "https://github.com/faustotnc/us-currency-recognition",
       "isVisualization": false,
       "visualizationIndex": null,
-      "isDark": true
+      "isDark": true,
+      "tag":"AI & ML"
     },
     {
       "id": 11,
@@ -180,6 +191,7 @@
       "link": "https://github.com/Robert-Wilk/KheperaIV-Safety-Research",
       "isVisualization": false,
       "visualizationIndex": null,
-      "isDark": true
+      "isDark": true,
+      "tag": "Robotics"
     }
 ]
