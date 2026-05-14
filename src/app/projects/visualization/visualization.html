@@ -1,0 +1,17 @@
+@if (visualization(); as v) {
+
+<div class="container">
+    <div class="content"
+    [innerHTML]="v"
+    >
+    </div>
+    <button class="back-button" (click)="back()">← Back</button>
+</div>
+
+} @else {
+    <div class="container content error">
+        <h1>Error</h1>
+        <p>Visualization not found.</p>
+        <a [routerLink]="['/projects']" class="btn-main">Back to Projects</a>
+    </div>
+}

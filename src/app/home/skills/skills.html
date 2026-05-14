@@ -1,0 +1,32 @@
+<div class="skills-wrapper">
+  <div class="skills-sample option-d">
+    <div class="layout-d-ghost" aria-hidden="true">SKILLS</div>
+    <h2 class="skills-heading">Skills</h2>
+    <div class="layout-b-grid">
+      @for (cat of categories; track cat) {
+        <div class="skill-category">
+          <span class="cat-label">{{ cat }}</span>
+          <ul>
+            @for (s of skillsByCategory(cat); track s.name) {
+              <li [style.--ring-color]="s.color">
+                <img [src]="s.icon" [alt]="s.alt" [class]="s.name.replace(' ', '-').replace('.', '').toLowerCase()"/>{{ s.name }}
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+    <div class="cert-section">
+      <span class="cert-eyebrow">Certifications</span>
+      <a class="cert-card" href="https://learn.microsoft.com/api/credentials/share/en-us/RobertWilk/CEA4FB98EC208791?sharingId=5FCF37BE83EB48EB" target="_blank" rel="noopener">
+        <img src="https://img.icons8.com/?size=48&id=VLKafOkk3sBX&format=png&color=000000" alt="Microsoft Azure Fundamentals badge" />
+        <div class="cert-info">
+          <span class="cert-name">Microsoft Azure Fundamentals</span>
+          <span class="cert-meta">Microsoft · AZ-900</span>
+        </div>
+        <span class="cert-verified">Verified ✓</span>
+        <span class="cert-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</div>

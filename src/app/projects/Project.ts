@@ -7,10 +7,11 @@ export interface Project {
     img: string;
     imgClass: string | null;
     hasLink: boolean;
-    link: boolean | null;
+    link: string | null;
     isVisualization: boolean;
     visualizationIndex: number | null;
     isDark: boolean;
+    tag: string;
 }
 
 export interface ProjectAbbrv {
@@ -21,6 +22,7 @@ export interface ProjectAbbrv {
     date: string;
     isViz: boolean;
     vizId: number | null;
+    tag: string;
 }
 
 export interface ProjectResolved {

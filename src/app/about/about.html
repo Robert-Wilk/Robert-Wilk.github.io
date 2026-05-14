@@ -1,0 +1,60 @@
+<div class="about-wrapper">
+    <div class="about-ghost" aria-hidden="true">About</div>
+
+    <div class="about-layout">
+        <!-- Sticky sidebar -->
+        <aside class="about-sidebar">
+            <div class="sidebar-inner">
+                <span class="sidebar-label">Software Engineer · Charlotte, NC</span>
+                <h1 class="sidebar-name">Robert Wilk</h1>
+                <div class="sidebar-photo-wrap">
+                    <img src="assets/media/mewithboard.jpg" alt="Robert Wilk" />
+                </div>
+                <p class="sidebar-bio">
+                    CS grad from UNC Charlotte — AI, Robotics & Gaming concentration.
+                    Currently modernizing enterprise pipelines at Wells Fargo.
+                    Happiest when building things that move, think, or look good on screen.
+                </p>
+                <div class="sidebar-tags">
+                    <span>Gen AI</span>
+                    <span>Robotics</span>
+                    <span>Full-Stack Development</span>
+                </div>
+                <a href="https://docs.google.com/document/d/e/2PACX-1vTq0GtqcKSsp6qavg4t2NQ0-uVtkpa7G48s0tbg9ZDGV-BJLvNOhhAAva2fqFvzUxiNxeuvZKDzEyMQ/pub" target="_blank" rel="noopener noreferrer" class="sidebar-resume-link">
+                    View Résumé <span class="sidebar-resume-arrow">↗</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Scrolling timeline -->
+        <div class="about-timeline">
+            <div class="timeline-line"></div>
+
+            @for (entry of timeline; track entry.title; let last = $last) {
+            <div class="timeline-entry" [class.timeline-entry--last]="last">
+                <div class="timeline-meta">
+                    <span class="timeline-year">{{ entry.year }}</span>
+                    <div class="timeline-dot" [class.timeline-dot--active]="entry.active"></div>
+                </div>
+                <div class="timeline-content">
+                    <span class="timeline-tag">{{ entry.tag }}</span>
+                    <h3 class="timeline-title">{{ entry.title }}</h3>
+                    <p class="timeline-body">{{ entry.body }}</p>
+                    @if (entry.bullets) {
+                    <ul class="timeline-bullets">
+                        @for (bullet of entry.bullets; track bullet) {
+                        <li>{{ bullet }}</li>
+                        }
+                    </ul>
+                    }
+                    @if (entry.cta) {
+                    <a [routerLink]="entry.cta.route" class="timeline-cta">
+                        {{ entry.cta.label }} <span class="timeline-cta-arrow">→</span>
+                    </a>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
