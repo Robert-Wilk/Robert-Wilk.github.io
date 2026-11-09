@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng deploy --no-build --dir=dist/rob-portfolio-v2/browser"
   },
   "prettier": {
     "printWidth": 100,
