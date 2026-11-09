@@ -175,3 +175,14 @@
   user-select: none;
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  .hero-c-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .scroll-hint {
+    display: none;
+  }
+}

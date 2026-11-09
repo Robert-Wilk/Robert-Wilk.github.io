@@ -8,5 +8,9 @@ import {RouterLink} from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
+  isNavOpen = false;
 
+  showNavElements() {
+    this.isNavOpen = !this.isNavOpen;
+  }
 }

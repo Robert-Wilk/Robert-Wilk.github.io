@@ -40,3 +40,15 @@
     from { transform: translateX(0); }
     to   { transform: translateX(-100%); }
 }
+
+@media only screen and (max-width: 768px) {
+    .scrolling-text .rail li {
+        font-size: 1.5rem;
+        padding: 0 1.5rem;
+    }
+    .scrolling-text .rail li::after {
+        content: '·';
+        margin-left: 1.5rem;
+        opacity: 0.5;
+    }   
+}
