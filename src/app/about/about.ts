@@ -35,7 +35,7 @@ export class About implements AfterViewInit, OnDestroy {
       year: '2018',
       tag: 'Inspiration',
       title: 'Built First Robot',
-      body: 'In order to graduate high school, students were required to complete a service learning project. I designed and programmed Clean Bot — a Lego Mindstorms NXT robot that swept a room and avoided obstacles using an ultrasonic sensor. I wanted to show the world that AI and robotics could be super impactful in our daily lives.',
+      body: 'In order to graduate high school, students were required to complete a service learning project. I designed and programmed Clean Bot - a Lego Mindstorms NXT robot that swept a room and avoided obstacles using an ultrasonic sensor. I wanted to show the world that AI and robotics could be super impactful in our daily lives.',
     },
     {
       year: '2019',
@@ -53,12 +53,12 @@ export class About implements AfterViewInit, OnDestroy {
       year: '2021',
       tag: 'Leadership',
       title: 'Re-established IEEE Eta Kappa Nu Honor Society',
-      body: 'I helped re-establish the IEEE Eta Kappa Nu honor society at UNC Charlotte from the ground up with a group of passionate students. I served as the first Treasurer on the re-founding executive board — organizing finances for induction ceremonies, networking events, and the Student Leadership Conference.',
+      body: 'I helped re-establish the IEEE Eta Kappa Nu honor society at UNC Charlotte from the ground up with a group of passionate students. I served as the first Treasurer on the re-founding executive board - organizing finances for induction ceremonies, networking events, and the Student Leadership Conference.',
     },
     {
       year: '2022',
       tag: 'Industry',
-      title: 'Interned at Wells Fargo',
+      title: 'Internship at Wells Fargo',
       body: "I was a Technology Intern in Wells Fargo's Liquidity & Risk Management department. During my internship, I built complex Angular UIs, presented to senior executives, and participated in Agile development for the first time in a production setting.",
     },
     {
@@ -70,30 +70,38 @@ export class About implements AfterViewInit, OnDestroy {
     {
       year: '2023',
       tag: 'Growth',
-      title: 'Program Analyst',
+      title: 'Program Analyst at Wells Fargo',
       body: 'After graduating I returned to Wells Fargo as a Program Analyst. I pushed API test coverage from 40% to 95%, built developer observability tooling, led a team of interns on a Power BI proof-of-concept for senior leadership, and shipped UX improvements that for our internal business users.',
     },
     {
       year: '2023',
       tag: 'Certification',
       title: 'Azure Fundamentals AZ-900',
-      body: 'I obtained a Microsoft certification in Azure cloud fundamentals — solidifying knowledge of cloud architecture, services, and how the infrastructure behind modern software actually works.',
+      body: 'I obtained a Microsoft certification in Azure cloud fundamentals - solidifying knowledge of cloud architecture, services, and how the infrastructure behind modern software actually works.',
     },
     {
       year: '2024',
-      tag: 'Now',
-      title: 'Software Engineer',
-      body: 'During my time at Wells Fargo, I gained a passion for modernizing existing and legacy platforms. I saw the potential in these systems and wanted to harness their full potential. I have modernized CI/CD pipelines to Harness, GitHub Actions, and OpenShift, then containerized them to leverage cloud infrastructure technology like Kubernetes. A few notable modernizations have been: ',
+      tag: 'Impact',
+      title: 'Software Engineer at Wells Fargo',
+      body: 'Promoted to Software Engineer from Program Analyst, I found my passion in modernizing legacy platforms. I saw the untapped potential in these systems and set out to unlock it. I modernized CI/CD pipelines onto Harness, GitHub Actions, and OpenShift, then containerized applications to take advantage of cloud infrastructure like Kubernetes. A few of the modernizations I\'m proudest of:',
       bullets: [
-        'Migrating a legacy reporting system consisting of 180+ SAP Crystal Reports and 250,000+ report instances to Power BI with S3 storage retention with an API to automate report ingestion at scale',
-        'Modernizing the risk and controls framework from a spreadheet to a full-service digital solution with AI integration.'
+        'Migrated a legacy reporting system of 180+ SAP Crystal Reports and 250,000+ report instances to Power BI, with S3 storage for retention and an API to automate report ingestion at scale.',
+        'Modernized the risk and controls framework from a spreadsheet into a full-service digital solution with AI integration.',
+        'Moved delivery pipelines from legacy tooling to Harness, GitHub Actions, and OpenShift, shortening the path from commit to production.',
+        'Containerized legacy applications for Kubernetes, making them portable, scalable, and easier to operate.'
       ],
+    },
+    {
+      year: '2026',
+      tag: 'Now',
+      title: 'Software Engineer (IC4) at Coinbase',
+      body: 'I joined Coinbase to take everything I learned modernizing systems at enterprise scale and apply it to a new frontier: crypto and financial infrastructure. It\'s a new chapter of growth as an engineer - taking on broader ownership, tackling new technical challenges, and learning from some of the best engineers in the industry.',
     },
     {
       year: 'Next',
       tag: 'Building',
       title: 'What Comes Next',
-      body: 'Exploring new frontiers in AI, robotics, and the web-development. This portfolio is part of that story — always a work in progress, just like the rest of it.',
+      body: 'Exploring new frontiers in AI, robotics, and the web-development. This portfolio is part of that story - always a work in progress, just like the rest of it.',
       cta: { label: "Let's work together", route: '/contact' },
       active: true,
     },
